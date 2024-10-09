@@ -5,5 +5,5 @@
 ## Sumário da Wiki
 - [Biografia](https://github.com/)
 - [Prótotipo](https://github.com/)
-- [DClasses](https://github.com/)
+- [Diagrama de Classes](https://github.com/)
 - [Descrição](https://github.com/)
