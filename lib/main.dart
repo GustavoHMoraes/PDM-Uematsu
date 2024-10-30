@@ -71,120 +71,67 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60),
-        child: Container(
-          decoration: BoxDecoration(
-            color: Color.fromARGB(255, 183, 212, 220),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.3),
-                spreadRadius: 0,
-                blurRadius: 10,
-                offset: Offset(0, 4),
-                      ),
-            ],
-        ),
-  child: AppBar(
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const MusicasPag()),
-                    );
-                  },
-                  icon: const Icon(Icons.history_edu,
-                      color: Color(0xffffffff), size: 30.0),
-                ),
-                const SizedBox(width: 10),
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => TrabalhosPag()),
-                    );
-                  },
-                  icon: const Icon(Icons.sports_esports,
-                      color: Color(0xffffffff), size: 30.0),
-                ),
-                const SizedBox(width: 10),
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ArtistaPag()),
-                    );
-                  },
-                  icon: const Icon(Icons.audiotrack,
-                      color: Color(0xffffffff), size: 30.0),
-                ),
-              ],
+  return Scaffold(
+    appBar: PreferredSize(
+      preferredSize: Size.fromHeight(60),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 183, 212, 220),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.3),
+              spreadRadius: 0,
+              blurRadius: 10,
+              offset: Offset(0, 4),
             ),
-            backgroundColor: Color(0x00000000),
-            elevation: 0,
-            centerTitle: true,
+          ],
+        ),
+        child: AppBar(
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ArtistaPag()),
+                  );
+                },
+                icon: const Icon(Icons.person,
+                    color: Color(0xffffffff), size: 30.0),
+              ),
+              const SizedBox(width: 10),
+              IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TrabalhosPag()),
+                  );
+                },
+                icon: const Icon(Icons.work,
+                    color: Color(0xffffffff), size: 30.0),
+              ),
+              const SizedBox(width: 10),
+              IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MusicasPag()),
+                  );
+                },
+                icon: const Icon(Icons.audiotrack,
+                    color: Color(0xffffffff), size: 30.0),
+              ),
+            ],
           ),
+          backgroundColor: Color(0x00000000),
+          elevation: 0,
+          centerTitle: true,
         ),
       ),
-      body: ListView(
+    ),
+    body: ListView(
         children: [
-          Stack(
-            children: [
-              ClipRect(
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  heightFactor: 0.7,
-                  widthFactor: 1,
-                  child: Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 4, 87, 114),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.3),
-                          spreadRadius: 0,
-                          blurRadius: 10,
-                          offset: Offset(0, 4),
-                        ),
-                      ],
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                top: 30,
-                width: 300,
-                height: 220,
-                child: Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(img.img),
-                      fit: BoxFit.contain, // Mantém a proporção da imagem
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 10),
-          Center(
-            child: Container(
-              width: 280,
-              height: 95,
-              margin: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('img/ttitle.png'),
-                ),
-              ),
-            ),
-          ),
           Container(
             margin: const EdgeInsets.all(16),
             decoration: BoxDecoration(
@@ -196,8 +143,8 @@ class _MyHomePageState extends State<MyHomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  textAlign: TextAlign.justify,
                   descricao.texto,
+                  textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontFamily: descricao.fonte,
                     fontSize: descricao.tamanho.toDouble(),

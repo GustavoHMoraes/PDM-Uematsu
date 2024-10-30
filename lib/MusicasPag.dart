@@ -1,43 +1,50 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/main.dart';
-import 'package:flutter_app/ArtistaPag.dart';
-import 'package:flutter_app/TrabalhosPag.dart';
-class CDescricao {
-  String texto;
-  String fonte;
-  int tamanho;
-  int cor;
-  String titulo;
-  int posicao;
-  String subtitulo;
-
-  CDescricao(this.texto, this.fonte, this.titulo, this.subtitulo,
-      this.tamanho, this.cor, this.posicao);
-}
-
-class CImg {
-  String img;
-  int posicao;
-  String legenda;
-
-  CImg(this.img, this.legenda, this.posicao);
-}
 
 class MusicasPag extends StatelessWidget {
   const MusicasPag({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false, 
-      title: 'Nobuo Uematsu',
-      theme: ThemeData(
-        fontFamily: 'Roboto',
-        scaffoldBackgroundColor: const Color.fromARGB(255, 241, 243, 242),
-        colorScheme: ColorScheme.fromSeed(seedColor: Color(0xffffffff)),
-        useMaterial3: true,
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Color.fromARGB(255, 183, 212, 220),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.3),
+                spreadRadius: 0,
+                blurRadius: 10,
+                offset: Offset(0, 4),
+              ),
+            ],
+          ),
+          child: AppBar(
+            title: const Text("Músicas"),
+            centerTitle: true,
+            backgroundColor: Color(0x00000000),
+            elevation: 0,
+          ),
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      backgroundColor: const Color.fromARGB(255, 241, 243, 242),
+      body: Center(
+        child: Container(
+          margin: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: Color.fromARGB(255, 160, 212, 220),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          padding: const EdgeInsets.all(15),
+          child: const Text(
+            "Conteúdo da página de Músicas",
+            style: TextStyle(fontSize: 18, color: Colors.black),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ),
     );
   }
 }
