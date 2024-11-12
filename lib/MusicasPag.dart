@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/main.dart';
+
+class CMusica{
+  String audio;
+  String titulo;
+
+  CMusica(this.audio, this.titulo);
+}
 
 class MusicasPag extends StatelessWidget {
-  const MusicasPag({Key? key}) : super(key: key);
+  MusicasPag({Key? key}) : super(key: key);
+
+final CImg imgNU = CImg('assets/img/NobuoD.png', '', 1); 
+
 
 
   @override

@@ -9,6 +9,12 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   const _interceptors = dart_sdk._interceptors;
   const js = dart_sdk.js;
   const ui = dart_sdk.ui;
+  const html = dart_sdk.html;
+  const collection = dart_sdk.collection;
+  const typed_data = dart_sdk.typed_data;
+  const _js_helper = dart_sdk._js_helper;
+  const _internal = dart_sdk._internal;
+  const js_util = dart_sdk.js_util;
   const dart = dart_sdk.dart;
   const dartx = dart_sdk.dartx;
   const app = flutter_sdk.src__material__app;
@@ -32,18 +38,83 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   const scroll_view = flutter_sdk.src__widgets__scroll_view;
   const edge_insets = flutter_sdk.src__painting__edge_insets;
   const border_radius = flutter_sdk.src__painting__border_radius;
+  const decoration_image = flutter_sdk.src__painting__decoration_image;
+  const image_resolution = flutter_sdk.src__painting__image_resolution;
+  const box_fit = flutter_sdk.src__painting__box_fit;
   const text = flutter_sdk.src__widgets__text;
   const text_style = flutter_sdk.src__painting__text_style;
   const binding = flutter_sdk.src__widgets__binding;
   const curves = flutter_sdk.src__animation__curves;
+  const plugin_registry = flutter_sdk.src__plugin_registry;
+  const elevated_button = flutter_sdk.src__material__elevated_button;
+  const rounded_rectangle_border = flutter_sdk.src__painting__rounded_rectangle_border;
+  const system_navigator = flutter_sdk.src__services__system_navigator;
+  const message_codec = flutter_sdk.src__services__message_codec;
+  const message_codecs = flutter_sdk.src__services__message_codecs;
+  const stack = flutter_sdk.src__rendering__stack;
+  const platform_view = flutter_sdk.src__widgets__platform_view;
+  const basic_types = flutter_sdk.src__foundation__basic_types;
+  const recognizer = flutter_sdk.src__gestures__recognizer;
+  const platform_view$ = flutter_sdk.src__rendering__platform_view;
+  const platform_views = flutter_sdk.src__services__platform_views;
+  const system_channels = flutter_sdk.src__services__system_channels;
+  const url_strategy = flutter_sdk.src__navigation__url_strategy;
+  const events = flutter_sdk.src__gestures__events;
+  const platform = flutter_sdk.src__foundation__platform;
+  const system_chrome = flutter_sdk.src__services__system_chrome;
+  const platform_channel = flutter_sdk.src__services__platform_channel;
   var $46zapp_entry = Object.create(dart.library);
   var main = Object.create(dart.library);
   var web_plugin_registrant = Object.create(dart.library);
   var MusicasPag = Object.create(dart.library);
   var ArtistaPag = Object.create(dart.library);
   var TrabalhosPag = Object.create(dart.library);
+  var url_launcher_web = Object.create(dart.library);
+  var url_launcher = Object.create(dart.library);
+  var main$ = Object.create(dart.library);
+  var link = Object.create(dart.library);
+  var url_launcher_platform_interface = Object.create(dart.library);
+  var link$ = Object.create(dart.library);
+  var dart_ui = Object.create(dart.library);
+  var legacy_api = Object.create(dart.library);
+  var types = Object.create(dart.library);
+  var url_launcher_uri = Object.create(dart.library);
+  var types$ = Object.create(dart.library);
+  var url_launcher_platform = Object.create(dart.library);
+  var dart_ui_real = Object.create(dart.library);
+  var url_launcher_string = Object.create(dart.library);
+  var type_conversion = Object.create(dart.library);
+  var plugin_platform_interface = Object.create(dart.library);
+  var method_channel_url_launcher = Object.create(dart.library);
+  var url_launcher_string$ = Object.create(dart.library);
   var $toString = dartx.toString;
   var $toDouble = dartx.toDouble;
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  var $addAll = dartx.addAll;
+  var $navigator = dartx.navigator;
+  var $open = dartx.open;
+  var $startsWith = dartx.startsWith;
+  var $userAgent = dartx.userAgent;
+  var $contains = dartx.contains;
+  var $_equals = dartx._equals;
+  var $isEmpty = dartx.isEmpty;
+  var $onClick = dartx.onClick;
+  var $_set = dartx._set;
+  var $_get = dartx._get;
+  var $style = dartx.style;
+  var $opacity = dartx.opacity;
+  var $display = dartx.display;
+  var $width = dartx.width;
+  var $height = dartx.height;
+  var $cursor = dartx.cursor;
+  var $setAttribute = dartx.setAttribute;
+  var $removeAttribute = dartx.removeAttribute;
+  var $remove = dartx.remove;
+  var $target = dartx.target;
+  var $shadowRoot = dartx.shadowRoot;
+  var $tagName = dartx.tagName;
+  var $trimLeft = dartx.trimLeft;
   dart._checkModuleNullSafetyMode(true);
   dart._checkModuleRuntimeTypes(false);
   var T = {
@@ -60,7 +131,34 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     BuildContextToTrabalhosPag: () => (T.BuildContextToTrabalhosPag = dart.constFn(dart.fnType(TrabalhosPag.TrabalhosPag, [framework.BuildContext])))(),
     BuildContextToMusicasPag: () => (T.BuildContextToMusicasPag = dart.constFn(dart.fnType(MusicasPag.MusicasPag, [framework.BuildContext])))(),
     JSArrayOfWidget: () => (T.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))(),
-    BuildContextToWidget: () => (T.BuildContextToWidget = dart.constFn(dart.fnType(framework.Widget, [framework.BuildContext])))()
+    BuildContextToWidget: () => (T.BuildContextToWidget = dart.constFn(dart.fnType(framework.Widget, [framework.BuildContext])))(),
+    JSArrayOfCLink: () => (T.JSArrayOfCLink = dart.constFn(_interceptors.JSArray$(ArtistaPag.CLink)))(),
+    ObjectN: () => (T.ObjectN = dart.constFn(dart.nullable(core.Object)))(),
+    CLinkToPadding: () => (T.CLinkToPadding = dart.constFn(dart.fnType(basic.Padding, [ArtistaPag.CLink])))(),
+    JSArrayOfCJogo: () => (T.JSArrayOfCJogo = dart.constFn(_interceptors.JSArray$(TrabalhosPag.CJogo)))(),
+    CJogoToContainer: () => (T.CJogoToContainer = dart.constFn(dart.fnType(container.Container, [TrabalhosPag.CJogo])))(),
+    LinkInfoToWebLinkDelegate: () => (T.LinkInfoToWebLinkDelegate = dart.constFn(dart.fnType(link$.WebLinkDelegate, [link.LinkInfo])))(),
+    FutureOfbool: () => (T.FutureOfbool = dart.constFn(async.Future$(core.bool)))(),
+    VoidTobool: () => (T.VoidTobool = dart.constFn(dart.fnType(core.bool, [])))(),
+    ExpandoOfObject: () => (T.ExpandoOfObject = dart.constFn(core.Expando$(core.Object)))(),
+    LinkedHashSetOfString: () => (T.LinkedHashSetOfString = dart.constFn(collection.LinkedHashSet$(core.String)))(),
+    CompleterOfByteData: () => (T.CompleterOfByteData = dart.constFn(async.Completer$(typed_data.ByteData)))(),
+    FutureOrOfByteData: () => (T.FutureOrOfByteData = dart.constFn(async.FutureOr$(typed_data.ByteData)))(),
+    FutureOrNOfByteData: () => (T.FutureOrNOfByteData = dart.constFn(dart.nullable(T.FutureOrOfByteData())))(),
+    FutureOrNOfByteDataTovoid: () => (T.FutureOrNOfByteDataTovoid = dart.constFn(dart.fnType(dart.void, [], [T.FutureOrNOfByteData()])))(),
+    FutureOfvoid: () => (T.FutureOfvoid = dart.constFn(async.Future$(dart.void)))(),
+    PlatformViewCreationParamsToLinkViewController: () => (T.PlatformViewCreationParamsToLinkViewController = dart.constFn(dart.fnType(link$.LinkViewController, [platform_view.PlatformViewCreationParams])))(),
+    FactoryOfOneSequenceGestureRecognizer: () => (T.FactoryOfOneSequenceGestureRecognizer = dart.constFn(basic_types.Factory$(recognizer.OneSequenceGestureRecognizer)))(),
+    BuildContextAndPlatformViewControllerToPlatformViewSurface: () => (T.BuildContextAndPlatformViewControllerToPlatformViewSurface = dart.constFn(dart.fnType(platform_view.PlatformViewSurface, [framework.BuildContext, platform_views.PlatformViewController])))(),
+    MouseEventTovoid: () => (T.MouseEventTovoid = dart.constFn(dart.fnType(dart.void, [html.MouseEvent])))(),
+    voidToNull: () => (T.voidToNull = dart.constFn(dart.fnType(core.Null, [dart.void])))(),
+    IdentityMapOfString$dynamic: () => (T.IdentityMapOfString$dynamic = dart.constFn(_js_helper.IdentityMap$(core.String, dart.dynamic)))(),
+    IdentityMapOfint$LinkViewController: () => (T.IdentityMapOfint$LinkViewController = dart.constFn(_js_helper.IdentityMap$(core.int, link$.LinkViewController)))(),
+    intN: () => (T.intN = dart.constFn(dart.nullable(core.int)))(),
+    intToElement: () => (T.intToElement = dart.constFn(dart.fnType(html.Element, [core.int])))(),
+    IdentityMapOfString$Object: () => (T.IdentityMapOfString$Object = dart.constFn(_js_helper.IdentityMap$(core.String, core.Object)))(),
+    boolN: () => (T.boolN = dart.constFn(dart.nullable(core.bool)))(),
+    boolNTobool: () => (T.boolNTobool = dart.constFn(dart.fnType(core.bool, [T.boolN()])))()
   };
   const CT = Object.create({
     _: () => (C, CT)
@@ -82,20 +180,14 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         [MyHomePage_title]: "Flutter Demo Home Page"
       });
     },
-    get C3() {
-      return C[3] = dart.const({
-        __proto__: ArtistaPag.ArtistaPag.prototype,
-        [Widget_key]: null
-      });
-    },
-    get C5() {
-      return C[5] = dart.const({
+    get C4() {
+      return C[4] = dart.const({
         __proto__: ui.Color.prototype,
         [Color_value]: 4294967295
       });
     },
-    get C6() {
-      return C[6] = dart.const({
+    get C5() {
+      return C[5] = dart.const({
         __proto__: icon_data.IconData.prototype,
         [IconData_matchTextDirection]: false,
         [IconData_fontPackage]: null,
@@ -103,24 +195,24 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         [IconData_codePoint]: 58513
       });
     },
-    get C4() {
-      return C[4] = dart.const({
+    get C3() {
+      return C[3] = dart.const({
         __proto__: icon.Icon.prototype,
         [Widget_key]: null,
         [Icon_textDirection]: null,
         [Icon_semanticLabel]: null,
         [Icon_shadows]: null,
-        [Icon_color]: C[5] || CT.C5,
+        [Icon_color]: C[4] || CT.C4,
         [Icon_opticalSize]: null,
         [Icon_grade]: null,
         [Icon_weight]: null,
         [Icon_fill]: null,
         [Icon_size]: 30,
-        [Icon_icon]: C[6] || CT.C6
+        [Icon_icon]: C[5] || CT.C5
       });
     },
-    get C7() {
-      return C[7] = dart.const({
+    get C6() {
+      return C[6] = dart.const({
         __proto__: basic.SizedBox.prototype,
         [Widget_key]: null,
         [SingleChildRenderObjectWidget_child]: null,
@@ -128,8 +220,8 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         [SizedBox_width]: 10
       });
     },
-    get C9() {
-      return C[9] = dart.const({
+    get C8() {
+      return C[8] = dart.const({
         __proto__: icon_data.IconData.prototype,
         [IconData_matchTextDirection]: false,
         [IconData_fontPackage]: null,
@@ -137,24 +229,24 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         [IconData_codePoint]: 59122
       });
     },
-    get C8() {
-      return C[8] = dart.const({
+    get C7() {
+      return C[7] = dart.const({
         __proto__: icon.Icon.prototype,
         [Widget_key]: null,
         [Icon_textDirection]: null,
         [Icon_semanticLabel]: null,
         [Icon_shadows]: null,
-        [Icon_color]: C[5] || CT.C5,
+        [Icon_color]: C[4] || CT.C4,
         [Icon_opticalSize]: null,
         [Icon_grade]: null,
         [Icon_weight]: null,
         [Icon_fill]: null,
         [Icon_size]: 30,
-        [Icon_icon]: C[9] || CT.C9
+        [Icon_icon]: C[8] || CT.C8
       });
     },
-    get C11() {
-      return C[11] = dart.const({
+    get C10() {
+      return C[10] = dart.const({
         __proto__: icon_data.IconData.prototype,
         [IconData_matchTextDirection]: false,
         [IconData_fontPackage]: null,
@@ -162,24 +254,24 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         [IconData_codePoint]: 57526
       });
     },
-    get C10() {
-      return C[10] = dart.const({
+    get C9() {
+      return C[9] = dart.const({
         __proto__: icon.Icon.prototype,
         [Widget_key]: null,
         [Icon_textDirection]: null,
         [Icon_semanticLabel]: null,
         [Icon_shadows]: null,
-        [Icon_color]: C[5] || CT.C5,
+        [Icon_color]: C[4] || CT.C4,
         [Icon_opticalSize]: null,
         [Icon_grade]: null,
         [Icon_weight]: null,
         [Icon_fill]: null,
         [Icon_size]: 30,
-        [Icon_icon]: C[11] || CT.C11
+        [Icon_icon]: C[10] || CT.C10
       });
     },
-    get C12() {
-      return C[12] = dart.const({
+    get C11() {
+      return C[11] = dart.const({
         __proto__: edge_insets.EdgeInsets.prototype,
         [EdgeInsets_bottom]: 16,
         [EdgeInsets_right]: 16,
@@ -187,13 +279,22 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         [EdgeInsets_left]: 16
       });
     },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 10,
+        [EdgeInsets_right]: 10,
+        [EdgeInsets_top]: 10,
+        [EdgeInsets_left]: 10
+      });
+    },
     get C13() {
       return C[13] = dart.const({
-        __proto__: edge_insets.EdgeInsets.prototype,
-        [EdgeInsets_bottom]: 15,
-        [EdgeInsets_right]: 15,
-        [EdgeInsets_top]: 15,
-        [EdgeInsets_left]: 15
+        __proto__: basic.SizedBox.prototype,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: null,
+        [SizedBox_width]: 15
       });
     },
     get C14() {
@@ -201,53 +302,62 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         __proto__: basic.SizedBox.prototype,
         [Widget_key]: null,
         [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: 10,
+        [SizedBox_width]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
         [SizedBox_height]: 20,
         [SizedBox_width]: null
       });
     },
-    get C17() {
-      return C[17] = dart.const({
+    get C18() {
+      return C[18] = dart.const({
         __proto__: ui.Locale.prototype,
         [Locale__countryCode]: "US",
         [Locale_scriptCode]: null,
         [Locale__languageCode]: "en"
       });
     },
-    get C16() {
-      return C[16] = dart.constList([C[17] || CT.C17], ui.Locale);
-    },
-    get C18() {
-      return C[18] = dart.const({
-        __proto__: curves._Linear.prototype
-      });
+    get C17() {
+      return C[17] = dart.constList([C[18] || CT.C18], ui.Locale);
     },
     get C19() {
       return C[19] = dart.const({
-        __proto__: core.Duration.prototype,
-        [Duration__duration]: 200000
+        __proto__: curves._Linear.prototype
       });
     },
     get C20() {
       return C[20] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 200000
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
         __proto__: app.ThemeMode.prototype,
         [_Enum__name]: "system",
         [_Enum_index]: 0
       });
     },
-    get C21() {
-      return C[21] = dart.constList([], navigator.NavigatorObserver);
-    },
     get C22() {
-      return C[22] = dart.constMap(core.String, T.BuildContextToWidget(), []);
+      return C[22] = dart.constList([], navigator.NavigatorObserver);
     },
     get C23() {
-      return C[23] = dart.const({
+      return C[23] = dart.constMap(core.String, T.BuildContextToWidget(), []);
+    },
+    get C24() {
+      return C[24] = dart.const({
         __proto__: main.MyApp.prototype,
         [Widget_key]: null
       });
     },
-    get C15() {
-      return C[15] = dart.const({
+    get C16() {
+      return C[16] = dart.const({
         __proto__: app.MaterialApp.prototype,
         [Widget_key]: null,
         [MaterialApp_useInheritedMediaQuery]: false,
@@ -261,15 +371,15 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         [MaterialApp_checkerboardOffscreenLayers]: false,
         [MaterialApp_checkerboardRasterCacheImages]: false,
         [MaterialApp_showPerformanceOverlay]: false,
-        [MaterialApp_supportedLocales]: C[16] || CT.C16,
+        [MaterialApp_supportedLocales]: C[17] || CT.C17,
         [MaterialApp_localeResolutionCallback]: null,
         [MaterialApp_localeListResolutionCallback]: null,
         [MaterialApp_localizationsDelegates]: null,
         [MaterialApp_locale]: null,
         [MaterialApp_color]: null,
-        [MaterialApp_themeAnimationCurve]: C[18] || CT.C18,
-        [MaterialApp_themeAnimationDuration]: C[19] || CT.C19,
-        [MaterialApp_themeMode]: C[20] || CT.C20,
+        [MaterialApp_themeAnimationCurve]: C[19] || CT.C19,
+        [MaterialApp_themeAnimationDuration]: C[20] || CT.C20,
+        [MaterialApp_themeMode]: C[21] || CT.C21,
         [MaterialApp_highContrastDarkTheme]: null,
         [MaterialApp_highContrastTheme]: null,
         [MaterialApp_darkTheme]: null,
@@ -282,19 +392,19 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         [MaterialApp_routerDelegate]: null,
         [MaterialApp_routeInformationParser]: null,
         [MaterialApp_routeInformationProvider]: null,
-        [MaterialApp_navigatorObservers]: C[21] || CT.C21,
+        [MaterialApp_navigatorObservers]: C[22] || CT.C22,
         [MaterialApp_onUnknownRoute]: null,
         [MaterialApp_onGenerateInitialRoutes]: null,
         [MaterialApp_onGenerateRoute]: null,
         [MaterialApp_initialRoute]: null,
-        [MaterialApp_routes]: C[22] || CT.C22,
-        [MaterialApp_home]: C[23] || CT.C23,
+        [MaterialApp_routes]: C[23] || CT.C23,
+        [MaterialApp_home]: C[24] || CT.C24,
         [MaterialApp_scaffoldMessengerKey]: null,
         [MaterialApp_navigatorKey]: null
       });
     },
-    get C24() {
-      return C[24] = dart.const({
+    get C25() {
+      return C[25] = dart.const({
         __proto__: text.Text.prototype,
         [Widget_key]: null,
         [Text_selectionColor]: null,
@@ -316,19 +426,28 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     },
     get C26() {
       return C[26] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 15,
+        [EdgeInsets_right]: 15,
+        [EdgeInsets_top]: 15,
+        [EdgeInsets_left]: 15
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
         __proto__: ui.TextAlign.prototype,
         [_Enum__name]: "center",
         [_Enum_index]: 2
       });
     },
-    get C28() {
-      return C[28] = dart.const({
+    get C30() {
+      return C[30] = dart.const({
         __proto__: ui.Color.prototype,
         [Color_value]: 4278190080
       });
     },
-    get C27() {
-      return C[27] = dart.const({
+    get C29() {
+      return C[29] = dart.const({
         __proto__: text_style.TextStyle.prototype,
         [TextStyle_overflow]: null,
         [TextStyle_fontVariations]: null,
@@ -354,12 +473,12 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         [TextStyle__fontFamilyFallback]: null,
         [TextStyle_fontFamily]: null,
         [TextStyle_backgroundColor]: null,
-        [TextStyle_color]: C[28] || CT.C28,
+        [TextStyle_color]: C[30] || CT.C30,
         [TextStyle_inherit]: true
       });
     },
-    get C25() {
-      return C[25] = dart.const({
+    get C27() {
+      return C[27] = dart.const({
         __proto__: text.Text.prototype,
         [Widget_key]: null,
         [Text_selectionColor]: null,
@@ -372,53 +491,11 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         [Text_softWrap]: null,
         [Text_locale]: null,
         [Text_textDirection]: null,
-        [Text_textAlign]: C[26] || CT.C26,
+        [Text_textAlign]: C[28] || CT.C28,
         [Text_strutStyle]: null,
-        [Text_style]: C[27] || CT.C27,
+        [Text_style]: C[29] || CT.C29,
         [Text_textSpan]: null,
         [Text_data]: "Conteúdo da página de Músicas"
-      });
-    },
-    get C29() {
-      return C[29] = dart.const({
-        __proto__: text.Text.prototype,
-        [Widget_key]: null,
-        [Text_selectionColor]: null,
-        [Text_textHeightBehavior]: null,
-        [Text_textWidthBasis]: null,
-        [Text_semanticsLabel]: null,
-        [Text_maxLines]: null,
-        [Text_textScaleFactor]: null,
-        [Text_overflow]: null,
-        [Text_softWrap]: null,
-        [Text_locale]: null,
-        [Text_textDirection]: null,
-        [Text_textAlign]: null,
-        [Text_strutStyle]: null,
-        [Text_style]: null,
-        [Text_textSpan]: null,
-        [Text_data]: "Artista"
-      });
-    },
-    get C30() {
-      return C[30] = dart.const({
-        __proto__: text.Text.prototype,
-        [Widget_key]: null,
-        [Text_selectionColor]: null,
-        [Text_textHeightBehavior]: null,
-        [Text_textWidthBasis]: null,
-        [Text_semanticsLabel]: null,
-        [Text_maxLines]: null,
-        [Text_textScaleFactor]: null,
-        [Text_overflow]: null,
-        [Text_softWrap]: null,
-        [Text_locale]: null,
-        [Text_textDirection]: null,
-        [Text_textAlign]: C[26] || CT.C26,
-        [Text_strutStyle]: null,
-        [Text_style]: C[27] || CT.C27,
-        [Text_textSpan]: null,
-        [Text_data]: "Conteúdo da página do artista"
       });
     },
     get C31() {
@@ -439,11 +516,75 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         [Text_strutStyle]: null,
         [Text_style]: null,
         [Text_textSpan]: null,
-        [Text_data]: "Trabalhos"
+        [Text_data]: "Links do Uematsu"
       });
     },
     get C32() {
       return C[32] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290237660
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: icon_data.IconData.prototype,
+        [IconData_matchTextDirection]: true,
+        [IconData_fontPackage]: null,
+        [IconData_fontFamily]: "MaterialIcons",
+        [IconData_codePoint]: 57490
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: icon.Icon.prototype,
+        [Widget_key]: null,
+        [Icon_textDirection]: null,
+        [Icon_semanticLabel]: null,
+        [Icon_shadows]: null,
+        [Icon_color]: null,
+        [Icon_opticalSize]: null,
+        [Icon_grade]: null,
+        [Icon_weight]: null,
+        [Icon_fill]: null,
+        [Icon_size]: null,
+        [Icon_icon]: C[34] || CT.C34
+      });
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: 30,
+        [SizedBox_width]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 10,
+        [EdgeInsets_right]: 0,
+        [EdgeInsets_top]: 10,
+        [EdgeInsets_left]: 0
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4288730332
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 20,
+        [EdgeInsets_right]: 25,
+        [EdgeInsets_top]: 20,
+        [EdgeInsets_left]: 25
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
         __proto__: text.Text.prototype,
         [Widget_key]: null,
         [Text_selectionColor]: null,
@@ -456,20 +597,265 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         [Text_softWrap]: null,
         [Text_locale]: null,
         [Text_textDirection]: null,
-        [Text_textAlign]: C[26] || CT.C26,
+        [Text_textAlign]: null,
         [Text_strutStyle]: null,
-        [Text_style]: C[27] || CT.C27,
+        [Text_style]: null,
         [Text_textSpan]: null,
-        [Text_data]: "Conteúdo da página de Trabalhos"
+        [Text_data]: "Trabalhos"
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 20,
+        [EdgeInsets_right]: 0,
+        [EdgeInsets_top]: 0,
+        [EdgeInsets_left]: 0
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: 15,
+        [SizedBox_width]: null
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: 8,
+        [SizedBox_width]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.constMap(core.String, core.String, []);
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: core.Object.prototype
+      });
+    },
+    get C45() {
+      return C[45] = dart.constSet(core.String, ["mailto", "tel", "sms"]);
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: main$.MyHomePage.prototype,
+        [Widget_key]: null,
+        [MyHomePage_title$]: "Flutter Demo Home Page"
+      });
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: main$.MyApp.prototype,
+        [Widget_key]: null
+      });
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: app.MaterialApp.prototype,
+        [Widget_key]: null,
+        [MaterialApp_useInheritedMediaQuery]: false,
+        [MaterialApp_debugShowMaterialGrid]: false,
+        [MaterialApp_scrollBehavior]: null,
+        [MaterialApp_restorationScopeId]: null,
+        [MaterialApp_actions]: null,
+        [MaterialApp_shortcuts]: null,
+        [MaterialApp_debugShowCheckedModeBanner]: false,
+        [MaterialApp_showSemanticsDebugger]: false,
+        [MaterialApp_checkerboardOffscreenLayers]: false,
+        [MaterialApp_checkerboardRasterCacheImages]: false,
+        [MaterialApp_showPerformanceOverlay]: false,
+        [MaterialApp_supportedLocales]: C[17] || CT.C17,
+        [MaterialApp_localeResolutionCallback]: null,
+        [MaterialApp_localeListResolutionCallback]: null,
+        [MaterialApp_localizationsDelegates]: null,
+        [MaterialApp_locale]: null,
+        [MaterialApp_color]: null,
+        [MaterialApp_themeAnimationCurve]: C[19] || CT.C19,
+        [MaterialApp_themeAnimationDuration]: C[20] || CT.C20,
+        [MaterialApp_themeMode]: C[21] || CT.C21,
+        [MaterialApp_highContrastDarkTheme]: null,
+        [MaterialApp_highContrastTheme]: null,
+        [MaterialApp_darkTheme]: null,
+        [MaterialApp_theme]: null,
+        [MaterialApp_onGenerateTitle]: null,
+        [MaterialApp_title]: "App",
+        [MaterialApp_builder]: null,
+        [MaterialApp_routerConfig]: null,
+        [MaterialApp_backButtonDispatcher]: null,
+        [MaterialApp_routerDelegate]: null,
+        [MaterialApp_routeInformationParser]: null,
+        [MaterialApp_routeInformationProvider]: null,
+        [MaterialApp_navigatorObservers]: C[22] || CT.C22,
+        [MaterialApp_onUnknownRoute]: null,
+        [MaterialApp_onGenerateInitialRoutes]: null,
+        [MaterialApp_onGenerateRoute]: null,
+        [MaterialApp_initialRoute]: null,
+        [MaterialApp_routes]: C[23] || CT.C23,
+        [MaterialApp_home]: C[48] || CT.C48,
+        [MaterialApp_scaffoldMessengerKey]: null,
+        [MaterialApp_navigatorKey]: null
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: link.LinkTarget.prototype,
+        [debugLabel$]: "defaultTarget"
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: link.LinkTarget.prototype,
+        [debugLabel$]: "self"
+      });
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: link.LinkTarget.prototype,
+        [debugLabel$]: "blank"
+      });
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: message_codecs.JSONMethodCodec.prototype
+      });
+    },
+    get C53() {
+      return C[53] = dart.constSet(T.FactoryOfOneSequenceGestureRecognizer(), []);
+    },
+    get C54() {
+      return C[54] = dart.fn(link$.LinkViewController._onGlobalClick, T.MouseEventTovoid());
+    },
+    get C55() {
+      return C[55] = dart.fn(link$.LinkViewController._viewFactory, T.intToElement());
+    },
+    get C57() {
+      return C[57] = dart.const({
+        __proto__: types.LaunchMode.prototype,
+        [_Enum__name]: "platformDefault",
+        [_Enum_index]: 0
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: types.LaunchMode.prototype,
+        [_Enum__name]: "inAppWebView",
+        [_Enum_index]: 1
+      });
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: types.LaunchMode.prototype,
+        [_Enum__name]: "externalApplication",
+        [_Enum_index]: 2
+      });
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: types.LaunchMode.prototype,
+        [_Enum__name]: "externalNonBrowserApplication",
+        [_Enum_index]: 3
+      });
+    },
+    get C56() {
+      return C[56] = dart.constList([C[57] || CT.C57, C[58] || CT.C58, C[59] || CT.C59, C[60] || CT.C60], types.LaunchMode);
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: types.WebViewConfiguration.prototype,
+        [headers$]: C[43] || CT.C43,
+        [enableDomStorage$]: true,
+        [enableJavaScript$]: true
+      });
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: types$.PreferredLaunchMode.prototype,
+        [_Enum__name]: "platformDefault",
+        [_Enum_index]: 0
+      });
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: types$.PreferredLaunchMode.prototype,
+        [_Enum__name]: "inAppWebView",
+        [_Enum_index]: 1
+      });
+    },
+    get C65() {
+      return C[65] = dart.const({
+        __proto__: types$.PreferredLaunchMode.prototype,
+        [_Enum__name]: "inAppBrowserView",
+        [_Enum_index]: 2
+      });
+    },
+    get C66() {
+      return C[66] = dart.const({
+        __proto__: types$.PreferredLaunchMode.prototype,
+        [_Enum__name]: "externalApplication",
+        [_Enum_index]: 3
+      });
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: types$.PreferredLaunchMode.prototype,
+        [_Enum__name]: "externalNonBrowserApplication",
+        [_Enum_index]: 4
+      });
+    },
+    get C62() {
+      return C[62] = dart.constList([C[63] || CT.C63, C[64] || CT.C64, C[65] || CT.C65, C[66] || CT.C66, C[67] || CT.C67], types$.PreferredLaunchMode);
+    },
+    get C68() {
+      return C[68] = dart.const({
+        __proto__: types$.InAppWebViewConfiguration.prototype,
+        [headers$0]: C[43] || CT.C43,
+        [enableDomStorage$0]: true,
+        [enableJavaScript$0]: true
+      });
+    },
+    get C71() {
+      return C[71] = dart.const({
+        __proto__: message_codecs.StandardMessageCodec.prototype
+      });
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: message_codecs.StandardMethodCodec.prototype,
+        [StandardMethodCodec_messageCodec]: C[71] || CT.C71
+      });
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: platform_channel.MethodChannel.prototype,
+        [MethodChannel__binaryMessenger]: null,
+        [MethodChannel_codec]: C[70] || CT.C70,
+        [MethodChannel_name]: "plugins.flutter.io/url_launcher"
       });
     }
   }, false);
-  var C = Array(33).fill(void 0);
+  var C = Array(72).fill(void 0);
   var I = [
     "file:///zapp/project/lib/main.dart",
     "package:flutter_app/MusicasPag.dart",
     "package:flutter_app/ArtistaPag.dart",
-    "package:flutter_app/TrabalhosPag.dart"
+    "package:flutter_app/TrabalhosPag.dart",
+    "file:///zapp/pub/.pub_cache/hosted/pub.dev/plugin_platform_interface-2.1.6/lib/plugin_platform_interface.dart",
+    "package:plugin_platform_interface/plugin_platform_interface.dart",
+    "package:url_launcher_platform_interface/src/url_launcher_platform.dart",
+    "package:url_launcher_web/url_launcher_web.dart",
+    "package:flutter_app/main.dart",
+    "package:url_launcher_platform_interface/link.dart",
+    "package:url_launcher_web/src/link.dart",
+    "file:///zapp/pub/.pub_cache/hosted/pub.dev/url_launcher_web-2.0.19/lib/src/link.dart",
+    "package:url_launcher/src/types.dart",
+    "package:url_launcher_platform_interface/src/types.dart",
+    "package:url_launcher_platform_interface/method_channel_url_launcher.dart"
   ];
   $46zapp_entry.runAppGuarded = function runAppGuarded() {
     async.runZonedGuarded(core.Null, dart.fn(() => {
@@ -493,7 +879,7 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
           }
         }, T.ZoneAndZoneDelegateAndZone__Tovoid())})});
   };
-  $46zapp_entry.main = function main$() {
+  $46zapp_entry.main = function main$0() {
     return async.async(dart.void, function* main() {
       yield ui.webOnlyWarmupEngine({runApp: dart.fn(() => {
           $46zapp_entry.runAppGuarded();
@@ -502,14 +888,14 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         }, T.VoidToNull())});
     });
   };
-  var texto$ = dart.privateName(main, "CDescricao.texto");
-  var fonte$ = dart.privateName(main, "CDescricao.fonte");
-  var tamanho$ = dart.privateName(main, "CDescricao.tamanho");
-  var cor$ = dart.privateName(main, "CDescricao.cor");
-  var titulo$ = dart.privateName(main, "CDescricao.titulo");
-  var posicao$ = dart.privateName(main, "CDescricao.posicao");
-  var subtitulo$ = dart.privateName(main, "CDescricao.subtitulo");
-  main.CDescricao = class CDescricao extends core.Object {
+  var texto$ = dart.privateName(main, "CDesc1.texto");
+  var fonte$ = dart.privateName(main, "CDesc1.fonte");
+  var tamanho$ = dart.privateName(main, "CDesc1.tamanho");
+  var cor$ = dart.privateName(main, "CDesc1.cor");
+  var titulo$ = dart.privateName(main, "CDesc1.titulo");
+  var posicao$ = dart.privateName(main, "CDesc1.posicao");
+  var subtitulo$ = dart.privateName(main, "CDesc1.subtitulo");
+  main.CDesc1 = class CDesc1 extends core.Object {
     get texto() {
       return this[texto$];
     }
@@ -553,10 +939,10 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
       this[subtitulo$] = value;
     }
     static ['_#new#tearOff'](texto, fonte, titulo, subtitulo, tamanho, cor, posicao) {
-      return new main.CDescricao.new(texto, fonte, titulo, subtitulo, tamanho, cor, posicao);
+      return new main.CDesc1.new(texto, fonte, titulo, subtitulo, tamanho, cor, posicao);
     }
   };
-  (main.CDescricao.new = function(texto, fonte, titulo, subtitulo, tamanho, cor, posicao) {
+  (main.CDesc1.new = function(texto, fonte, titulo, subtitulo, tamanho, cor, posicao) {
     this[texto$] = texto;
     this[fonte$] = fonte;
     this[titulo$] = titulo;
@@ -565,12 +951,12 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     this[cor$] = cor;
     this[posicao$] = posicao;
     ;
-  }).prototype = main.CDescricao.prototype;
-  dart.addTypeTests(main.CDescricao);
-  dart.addTypeCaches(main.CDescricao);
-  dart.setLibraryUri(main.CDescricao, I[0]);
-  dart.setFieldSignature(main.CDescricao, () => ({
-    __proto__: dart.getFields(main.CDescricao.__proto__),
+  }).prototype = main.CDesc1.prototype;
+  dart.addTypeTests(main.CDesc1);
+  dart.addTypeCaches(main.CDesc1);
+  dart.setLibraryUri(main.CDesc1, I[0]);
+  dart.setFieldSignature(main.CDesc1, () => ({
+    __proto__: dart.getFields(main.CDesc1.__proto__),
     texto: dart.fieldType(core.String),
     fonte: dart.fieldType(core.String),
     tamanho: dart.fieldType(core.int),
@@ -703,20 +1089,27 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   main._MyHomePageState = class _MyHomePageState extends framework.State$(main.MyHomePage) {
     build(context) {
       return new scaffold.Scaffold.new({appBar: new preferred_size.PreferredSize.new({preferredSize: new ui.Size.fromHeight(60), child: new container.Container.new({decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 183, 212, 220), boxShadow: T.JSArrayOfBoxShadow().of([new box_shadow.BoxShadow.new({color: colors.Colors.black.withOpacity(0.3), spreadRadius: 0, blurRadius: 10, offset: new ui.Offset.new(0, 4)})])}), child: new app_bar.AppBar.new({title: new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidget().of([new icon_button.IconButton.new({onPressed: dart.fn(() => {
-                      navigator.Navigator.push(dart.dynamic, context, new page.MaterialPageRoute.new({builder: dart.fn(context => C[3] || CT.C3, T.BuildContextToArtistaPag())}));
-                    }, T.VoidTovoid()), icon: C[4] || CT.C4}), C[7] || CT.C7, new icon_button.IconButton.new({onPressed: dart.fn(() => {
+                      navigator.Navigator.push(dart.dynamic, context, new page.MaterialPageRoute.new({builder: dart.fn(context => new ArtistaPag.ArtistaPag.new(), T.BuildContextToArtistaPag())}));
+                    }, T.VoidTovoid()), icon: C[3] || CT.C3}), C[6] || CT.C6, new icon_button.IconButton.new({onPressed: dart.fn(() => {
                       navigator.Navigator.push(dart.dynamic, context, new page.MaterialPageRoute.new({builder: dart.fn(context => new TrabalhosPag.TrabalhosPag.new(), T.BuildContextToTrabalhosPag())}));
-                    }, T.VoidTovoid()), icon: C[8] || CT.C8}), C[7] || CT.C7, new icon_button.IconButton.new({onPressed: dart.fn(() => {
+                    }, T.VoidTovoid()), icon: C[7] || CT.C7}), C[6] || CT.C6, new icon_button.IconButton.new({onPressed: dart.fn(() => {
                       navigator.Navigator.push(dart.dynamic, context, new page.MaterialPageRoute.new({builder: dart.fn(context => new MusicasPag.MusicasPag.new(), T.BuildContextToMusicasPag())}));
-                    }, T.VoidTovoid()), icon: C[10] || CT.C10})])}), backgroundColor: new ui.Color.new(0), elevation: 0, centerTitle: true})})}), body: new scroll_view.ListView.new({children: T.JSArrayOfWidget().of([new container.Container.new({margin: C[12] || CT.C12, decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 160, 212, 220), borderRadius: new border_radius.BorderRadius.circular(8)}), padding: C[13] || CT.C13, child: new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new text.Text.new(this.descricao.texto, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontFamily: this.descricao.fonte, fontSize: this.descricao.tamanho[$toDouble](), color: new ui.Color.new(this.descricao.cor)})})])})}), C[14] || CT.C14])})});
+                    }, T.VoidTovoid()), icon: C[9] || CT.C9})])}), backgroundColor: new ui.Color.new(0), elevation: 0, centerTitle: true})})}), body: new scroll_view.ListView.new({children: T.JSArrayOfWidget().of([new container.Container.new({margin: C[11] || CT.C11, decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 160, 212, 220), borderRadius: new border_radius.BorderRadius.circular(8)}), padding: C[12] || CT.C12, child: new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new basic.Row.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new container.Container.new({width: 175, height: 175, decoration: new box_decoration.BoxDecoration.new({borderRadius: new border_radius.BorderRadius.circular(8), image: new decoration_image.DecorationImage.new({image: new image_resolution.AssetImage.new(this.img1.img), fit: box_fit.BoxFit.cover})})}), C[13] || CT.C13, new basic.Expanded.new({child: new text.Text.new(this.desc1.texto, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontFamily: this.desc1.fonte, fontSize: this.desc1.tamanho[$toDouble](), color: new ui.Color.new(this.desc1.cor)})})})])}), C[14] || CT.C14, new text.Text.new(this.desc2.texto, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontFamily: this.desc2.fonte, fontSize: this.desc2.tamanho[$toDouble](), color: new ui.Color.new(this.desc2.cor)})}), C[15] || CT.C15, new basic.Row.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new basic.Expanded.new({child: new text.Text.new(this.desc3.texto, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontFamily: this.desc3.fonte, fontSize: this.desc3.tamanho[$toDouble](), color: new ui.Color.new(this.desc3.cor)})})}), C[13] || CT.C13, new container.Container.new({width: 175, height: 175, decoration: new box_decoration.BoxDecoration.new({borderRadius: new border_radius.BorderRadius.circular(8), image: new decoration_image.DecorationImage.new({image: new image_resolution.AssetImage.new(this.img2.img), fit: box_fit.BoxFit.cover})})})])}), C[15] || CT.C15, new text.Text.new(this.desc4.texto, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontFamily: this.desc4.fonte, fontSize: this.desc4.tamanho[$toDouble](), color: new ui.Color.new(this.desc4.cor)})}), C[15] || CT.C15, new basic.Row.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new container.Container.new({width: 175, height: 175, decoration: new box_decoration.BoxDecoration.new({borderRadius: new border_radius.BorderRadius.circular(8), image: new decoration_image.DecorationImage.new({image: new image_resolution.AssetImage.new(this.img3.img), fit: box_fit.BoxFit.cover})})}), C[13] || CT.C13, new basic.Expanded.new({child: new text.Text.new(this.desc5.texto, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontFamily: this.desc5.fonte, fontSize: this.desc5.tamanho[$toDouble](), color: new ui.Color.new(this.desc5.cor)})})})])}), C[15] || CT.C15, new text.Text.new(this.desc6.texto, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontFamily: this.desc6.fonte, fontSize: this.desc6.tamanho[$toDouble](), color: new ui.Color.new(this.desc6.cor)})})])})}), C[15] || CT.C15])})});
     }
     static ['_#new#tearOff']() {
       return new main._MyHomePageState.new();
     }
   };
   (main._MyHomePageState.new = function() {
-    this.descricao = new main.CDescricao.new("   Nobuo Uematsu,  nascido em 21 de março de 1959, é um dos compositores mais renomados da indústria dos videogames.", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
-    this.img = new main.CImg.new("img/.png", "", 1);
+    this.desc1 = new main.CDesc1.new("   Nobuo Uematsu,  nascido em 21 de março de 1959, é um dos compositores mais renomados da indústria dos videogames.", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
+    this.desc2 = new main.CDesc1.new("   Uematsu desde cedo mostrou interesse pela música, inicialmente se inspirando em artistas ocidentais, como Elton John, para explorar sua paixão musical. Embora tenha começado a tocar piano ainda jovem, ele é, na maioria, um autodidata, o que demonstra seu talento natural e dedicação à arte.", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
+    this.desc3 = new main.CDesc1.new("   Em 1985, ele começou a trabalhar na Square (atual Square Enix), uma empresa de videogames onde sua carreira como compositor de trilhas sonoras floresceu.", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
+    this.desc4 = new main.CDesc1.new("  Ele se tornou amplamente conhecido por sua habilidade em combinar melodias épicas e emocionantes com narrativas profundas e envolventes dos jogos. Suas composições têm um alcance emocional único, misturando influências clássicas, rock e eletrônicas. Entre seus principais feitos, Uematsu é reconhecido por transformar a música de jogos em algo que transcende o ambiente digital, sendo muitas vezes tocada em grandes concertos ao redor do mundo. Sua música, apreciada tanto por fãs de jogos quanto por apreciadores de música em geral, desempenhou um papel crucial em elevar a música de videogames ao status de arte. ", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
+    this.desc5 = new main.CDesc1.new("   Além de seu trabalho com jogos, ele também formou sua própria banda, The Black Mages, onde explorou versões mais pesadas e eletrificadas de suas composições.", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
+    this.desc6 = new main.CDesc1.new("   Mais tarde, ele fundou o estúdio Smile Please, onde continuou a trabalhar em projetos pessoais e musicais. Nobuo Uematsu é frequentemente descrito como uma lenda viva da música, e seu impacto continua a influenciar a forma como a música de videogames é percebida e apreciada mundialmente. Seu trabalho tem sido elogiado não apenas por sua habilidade técnica, mas também por seu profundo senso de narrativa emocional, tornando-o um dos mais respeitados compositores contemporâneos.", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
+    this.img1 = new main.CImg.new("assets/img/Nobuo1.jpg", "", 1);
+    this.img2 = new main.CImg.new("assets/img/Nobuo2.jpeg", "", 1);
+    this.img3 = new main.CImg.new("assets/img/Nobuo3.jpg", "", 1);
     main._MyHomePageState.__proto__.new.call(this);
     ;
   }).prototype = main._MyHomePageState.prototype;
@@ -729,8 +1122,15 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   dart.setLibraryUri(main._MyHomePageState, I[0]);
   dart.setFieldSignature(main._MyHomePageState, () => ({
     __proto__: dart.getFields(main._MyHomePageState.__proto__),
-    descricao: dart.finalFieldType(main.CDescricao),
-    img: dart.finalFieldType(main.CImg)
+    desc1: dart.finalFieldType(main.CDesc1),
+    desc2: dart.finalFieldType(main.CDesc1),
+    desc3: dart.finalFieldType(main.CDesc1),
+    desc4: dart.finalFieldType(main.CDesc1),
+    desc5: dart.finalFieldType(main.CDesc1),
+    desc6: dart.finalFieldType(main.CDesc1),
+    img1: dart.finalFieldType(main.CImg),
+    img2: dart.finalFieldType(main.CImg),
+    img3: dart.finalFieldType(main.CImg)
   }));
   var MaterialApp_useInheritedMediaQuery = dart.privateName(app, "MaterialApp.useInheritedMediaQuery");
   var MaterialApp_debugShowMaterialGrid = dart.privateName(app, "MaterialApp.debugShowMaterialGrid");
@@ -779,10 +1179,14 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   var MaterialApp_home = dart.privateName(app, "MaterialApp.home");
   var MaterialApp_scaffoldMessengerKey = dart.privateName(app, "MaterialApp.scaffoldMessengerKey");
   var MaterialApp_navigatorKey = dart.privateName(app, "MaterialApp.navigatorKey");
-  main.main = function main$0() {
-    binding.runApp(C[15] || CT.C15);
+  main.main = function main$1() {
+    binding.runApp(C[16] || CT.C16);
   };
-  web_plugin_registrant.registerPlugins = function registerPlugins() {
+  web_plugin_registrant.registerPlugins = function registerPlugins(pluginRegistrar = null) {
+    let t0;
+    let registrar = (t0 = pluginRegistrar, t0 == null ? plugin_registry.webPluginRegistrar : t0);
+    url_launcher_web.UrlLauncherPlugin.registerWith(registrar);
+    registrar.registerMessageHandler();
   };
   var Text_selectionColor = dart.privateName(text, "Text.selectionColor");
   var Text_textHeightBehavior = dart.privateName(text, "Text.textHeightBehavior");
@@ -831,7 +1235,7 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
       return new MusicasPag.MusicasPag.new({key: key});
     }
     build(context) {
-      return new scaffold.Scaffold.new({appBar: new preferred_size.PreferredSize.new({preferredSize: new ui.Size.fromHeight(60), child: new container.Container.new({decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 183, 212, 220), boxShadow: T.JSArrayOfBoxShadow().of([new box_shadow.BoxShadow.new({color: colors.Colors.black.withOpacity(0.3), spreadRadius: 0, blurRadius: 10, offset: new ui.Offset.new(0, 4)})])}), child: new app_bar.AppBar.new({title: C[24] || CT.C24, centerTitle: true, backgroundColor: new ui.Color.new(0), elevation: 0})})}), backgroundColor: C[1] || CT.C1, body: new basic.Center.new({child: new container.Container.new({margin: C[12] || CT.C12, decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 160, 212, 220), borderRadius: new border_radius.BorderRadius.circular(8)}), padding: C[13] || CT.C13, child: C[25] || CT.C25})})});
+      return new scaffold.Scaffold.new({appBar: new preferred_size.PreferredSize.new({preferredSize: new ui.Size.fromHeight(60), child: new container.Container.new({decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 183, 212, 220), boxShadow: T.JSArrayOfBoxShadow().of([new box_shadow.BoxShadow.new({color: colors.Colors.black.withOpacity(0.3), spreadRadius: 0, blurRadius: 10, offset: new ui.Offset.new(0, 4)})])}), child: new app_bar.AppBar.new({title: C[25] || CT.C25, centerTitle: true, backgroundColor: new ui.Color.new(0), elevation: 0})})}), backgroundColor: C[1] || CT.C1, body: new basic.Center.new({child: new container.Container.new({margin: C[11] || CT.C11, decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 160, 212, 220), borderRadius: new border_radius.BorderRadius.circular(8)}), padding: C[26] || CT.C26, child: C[27] || CT.C27})})});
     }
   };
   (MusicasPag.MusicasPag.new = function(opts) {
@@ -846,17 +1250,82 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     build: dart.fnType(framework.Widget, [framework.BuildContext])
   }));
   dart.setLibraryUri(MusicasPag.MusicasPag, I[1]);
+  var titulo$0 = dart.privateName(ArtistaPag, "CLink.titulo");
+  var url$ = dart.privateName(ArtistaPag, "CLink.url");
+  ArtistaPag.CLink = class CLink extends core.Object {
+    get titulo() {
+      return this[titulo$0];
+    }
+    set titulo(value) {
+      this[titulo$0] = value;
+    }
+    get url() {
+      return this[url$];
+    }
+    set url(value) {
+      this[url$] = value;
+    }
+    static ['_#new#tearOff'](titulo, url) {
+      return new ArtistaPag.CLink.new(titulo, url);
+    }
+  };
+  (ArtistaPag.CLink.new = function(titulo, url) {
+    this[titulo$0] = titulo;
+    this[url$] = url;
+    ;
+  }).prototype = ArtistaPag.CLink.prototype;
+  dart.addTypeTests(ArtistaPag.CLink);
+  dart.addTypeCaches(ArtistaPag.CLink);
+  dart.setLibraryUri(ArtistaPag.CLink, I[2]);
+  dart.setFieldSignature(ArtistaPag.CLink, () => ({
+    __proto__: dart.getFields(ArtistaPag.CLink.__proto__),
+    titulo: dart.fieldType(core.String),
+    url: dart.fieldType(core.String)
+  }));
+  var links = dart.privateName(ArtistaPag, "ArtistaPag.links");
+  var imgN = dart.privateName(ArtistaPag, "ArtistaPag.imgN");
+  var _abrirLink = dart.privateName(ArtistaPag, "_abrirLink");
   ArtistaPag.ArtistaPag = class ArtistaPag$ extends framework.StatelessWidget {
+    get links() {
+      return this[links];
+    }
+    set links(value) {
+      super.links = value;
+    }
+    get imgN() {
+      return this[imgN];
+    }
+    set imgN(value) {
+      super.imgN = value;
+    }
     static ['_#new#tearOff'](opts) {
       let key = opts && 'key' in opts ? opts.key : null;
       return new ArtistaPag.ArtistaPag.new({key: key});
     }
+    [_abrirLink](url) {
+      return async.async(dart.void, function* _abrirLink() {
+        let uri = core.Uri.parse(url);
+        if (yield url_launcher_uri.canLaunchUrl(uri)) {
+          yield url_launcher_uri.launchUrl(uri, {mode: types.LaunchMode.externalApplication});
+        } else {
+          dart.throw("Não foi possível abrir o link: " + url);
+        }
+      });
+    }
     build(context) {
-      return new scaffold.Scaffold.new({appBar: new preferred_size.PreferredSize.new({preferredSize: new ui.Size.fromHeight(60), child: new container.Container.new({decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 183, 212, 220), boxShadow: T.JSArrayOfBoxShadow().of([new box_shadow.BoxShadow.new({color: colors.Colors.black.withOpacity(0.3), spreadRadius: 0, blurRadius: 10, offset: new ui.Offset.new(0, 4)})])}), child: new app_bar.AppBar.new({title: C[29] || CT.C29, centerTitle: true, backgroundColor: new ui.Color.new(0), elevation: 0})})}), backgroundColor: C[1] || CT.C1, body: new basic.Center.new({child: new container.Container.new({margin: C[12] || CT.C12, decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 160, 212, 220), borderRadius: new border_radius.BorderRadius.circular(8)}), padding: C[13] || CT.C13, child: C[30] || CT.C30})})});
+      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({title: C[31] || CT.C31, centerTitle: true, backgroundColor: C[32] || CT.C32, leading: new icon_button.IconButton.new({icon: C[33] || CT.C33, onPressed: dart.fn(() => {
+              navigator.Navigator.pop(T.ObjectN(), context);
+            }, T.VoidTovoid())})}), backgroundColor: C[1] || CT.C1, body: new basic.Center.new({child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: (() => {
+              let t0 = T.JSArrayOfWidget().of([new container.Container.new({width: 250, height: 250, decoration: new box_decoration.BoxDecoration.new({image: new decoration_image.DecorationImage.new({image: new image_resolution.AssetImage.new(this.imgN.img), fit: box_fit.BoxFit.cover})})}), C[35] || CT.C35]);
+              t0[$addAll](this.links[$map](basic.Padding, dart.fn(link => new basic.Padding.new({padding: C[36] || CT.C36, child: new elevated_button.ElevatedButton.new({style: elevated_button.ElevatedButton.styleFrom({backgroundColor: C[37] || CT.C37, padding: C[38] || CT.C38, shape: new rounded_rectangle_border.RoundedRectangleBorder.new({borderRadius: new border_radius.BorderRadius.circular(15)})}), onPressed: dart.fn(() => this[_abrirLink](link.url), T.VoidTovoid()), child: new text.Text.new(link.titulo, {style: C[29] || CT.C29})})}), T.CLinkToPadding()))[$toList]());
+              return t0;
+            })()})})});
     }
   };
   (ArtistaPag.ArtistaPag.new = function(opts) {
     let key = opts && 'key' in opts ? opts.key : null;
+    this[links] = T.JSArrayOfCLink().of([new ArtistaPag.CLink.new("Compre o Merch!", "https://www.merchbar.com/reggae-latin-world/nobuo-uematsu?srsltid=AfmBOoq7uADVVcvl66w64Ef1zP8v4AuXL-VDqHurhApgj3omHpUkIgPj"), new ArtistaPag.CLink.new("Ouça as músicas!", "https://www.youtube.com/channel/UCZOd9KDD58MZR13UbbtdrpQ"), new ArtistaPag.CLink.new("X do Uematsu!", "https://x.com/uematsunobuo")]);
+    this[imgN] = new main$.CImg.new("assets/img/Nobuo.png", "", 1);
     ArtistaPag.ArtistaPag.__proto__.new.call(this, {key: key});
     ;
   }).prototype = ArtistaPag.ArtistaPag.prototype;
@@ -864,20 +1333,296 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   dart.addTypeCaches(ArtistaPag.ArtistaPag);
   dart.setMethodSignature(ArtistaPag.ArtistaPag, () => ({
     __proto__: dart.getMethods(ArtistaPag.ArtistaPag.__proto__),
+    [_abrirLink]: dart.fnType(dart.void, [core.String]),
     build: dart.fnType(framework.Widget, [framework.BuildContext])
   }));
   dart.setLibraryUri(ArtistaPag.ArtistaPag, I[2]);
+  dart.setFieldSignature(ArtistaPag.ArtistaPag, () => ({
+    __proto__: dart.getFields(ArtistaPag.ArtistaPag.__proto__),
+    links: dart.finalFieldType(core.List$(ArtistaPag.CLink)),
+    imgN: dart.finalFieldType(main$.CImg)
+  }));
+  var jogo$ = dart.privateName(TrabalhosPag, "CJogo.jogo");
+  var participacao$ = dart.privateName(TrabalhosPag, "CJogo.participacao");
+  TrabalhosPag.CJogo = class CJogo extends core.Object {
+    get jogo() {
+      return this[jogo$];
+    }
+    set jogo(value) {
+      this[jogo$] = value;
+    }
+    get participacao() {
+      return this[participacao$];
+    }
+    set participacao(value) {
+      this[participacao$] = value;
+    }
+    static ['_#new#tearOff'](jogo, participacao) {
+      return new TrabalhosPag.CJogo.new(jogo, participacao);
+    }
+  };
+  (TrabalhosPag.CJogo.new = function(jogo, participacao) {
+    this[jogo$] = jogo;
+    this[participacao$] = participacao;
+    ;
+  }).prototype = TrabalhosPag.CJogo.prototype;
+  dart.addTypeTests(TrabalhosPag.CJogo);
+  dart.addTypeCaches(TrabalhosPag.CJogo);
+  dart.setLibraryUri(TrabalhosPag.CJogo, I[3]);
+  dart.setFieldSignature(TrabalhosPag.CJogo, () => ({
+    __proto__: dart.getFields(TrabalhosPag.CJogo.__proto__),
+    jogo: dart.fieldType(core.String),
+    participacao: dart.fieldType(core.String)
+  }));
+  var empresa$ = dart.privateName(TrabalhosPag, "CTrabalho.empresa");
+  var resumo$ = dart.privateName(TrabalhosPag, "CTrabalho.resumo");
+  TrabalhosPag.CTrabalho = class CTrabalho extends core.Object {
+    get empresa() {
+      return this[empresa$];
+    }
+    set empresa(value) {
+      this[empresa$] = value;
+    }
+    get resumo() {
+      return this[resumo$];
+    }
+    set resumo(value) {
+      this[resumo$] = value;
+    }
+    static ['_#new#tearOff'](empresa, resumo) {
+      return new TrabalhosPag.CTrabalho.new(empresa, resumo);
+    }
+  };
+  (TrabalhosPag.CTrabalho.new = function(empresa, resumo) {
+    this[empresa$] = empresa;
+    this[resumo$] = resumo;
+    ;
+  }).prototype = TrabalhosPag.CTrabalho.prototype;
+  dart.addTypeTests(TrabalhosPag.CTrabalho);
+  dart.addTypeCaches(TrabalhosPag.CTrabalho);
+  dart.setLibraryUri(TrabalhosPag.CTrabalho, I[3]);
+  dart.setFieldSignature(TrabalhosPag.CTrabalho, () => ({
+    __proto__: dart.getFields(TrabalhosPag.CTrabalho.__proto__),
+    empresa: dart.fieldType(core.String),
+    resumo: dart.fieldType(core.String)
+  }));
+  var descT1 = dart.privateName(TrabalhosPag, "TrabalhosPag.descT1");
+  var descT2 = dart.privateName(TrabalhosPag, "TrabalhosPag.descT2");
+  var imgT1 = dart.privateName(TrabalhosPag, "TrabalhosPag.imgT1");
+  var imgT2 = dart.privateName(TrabalhosPag, "TrabalhosPag.imgT2");
+  var imgT3 = dart.privateName(TrabalhosPag, "TrabalhosPag.imgT3");
+  var imgT4 = dart.privateName(TrabalhosPag, "TrabalhosPag.imgT4");
+  var t1 = dart.privateName(TrabalhosPag, "TrabalhosPag.t1");
+  var t2 = dart.privateName(TrabalhosPag, "TrabalhosPag.t2");
+  var t3 = dart.privateName(TrabalhosPag, "TrabalhosPag.t3");
+  var t4 = dart.privateName(TrabalhosPag, "TrabalhosPag.t4");
+  var ff = dart.privateName(TrabalhosPag, "TrabalhosPag.ff");
+  var ffvi = dart.privateName(TrabalhosPag, "TrabalhosPag.ffvi");
+  var ffvii = dart.privateName(TrabalhosPag, "TrabalhosPag.ffvii");
+  var ffviii = dart.privateName(TrabalhosPag, "TrabalhosPag.ffviii");
+  var ffix = dart.privateName(TrabalhosPag, "TrabalhosPag.ffix");
+  var ffx = dart.privateName(TrabalhosPag, "TrabalhosPag.ffx");
+  var bd = dart.privateName(TrabalhosPag, "TrabalhosPag.bd");
+  var lo = dart.privateName(TrabalhosPag, "TrabalhosPag.lo");
+  var tls = dart.privateName(TrabalhosPag, "TrabalhosPag.tls");
+  var dw = dart.privateName(TrabalhosPag, "TrabalhosPag.dw");
+  var tj = dart.privateName(TrabalhosPag, "TrabalhosPag.tj");
+  var nw = dart.privateName(TrabalhosPag, "TrabalhosPag.nw");
+  var bm = dart.privateName(TrabalhosPag, "TrabalhosPag.bm");
   TrabalhosPag.TrabalhosPag = class TrabalhosPag$ extends framework.StatelessWidget {
+    get descT1() {
+      return this[descT1];
+    }
+    set descT1(value) {
+      super.descT1 = value;
+    }
+    get descT2() {
+      return this[descT2];
+    }
+    set descT2(value) {
+      super.descT2 = value;
+    }
+    get imgT1() {
+      return this[imgT1];
+    }
+    set imgT1(value) {
+      super.imgT1 = value;
+    }
+    get imgT2() {
+      return this[imgT2];
+    }
+    set imgT2(value) {
+      super.imgT2 = value;
+    }
+    get imgT3() {
+      return this[imgT3];
+    }
+    set imgT3(value) {
+      super.imgT3 = value;
+    }
+    get imgT4() {
+      return this[imgT4];
+    }
+    set imgT4(value) {
+      super.imgT4 = value;
+    }
+    get t1() {
+      return this[t1];
+    }
+    set t1(value) {
+      super.t1 = value;
+    }
+    get t2() {
+      return this[t2];
+    }
+    set t2(value) {
+      super.t2 = value;
+    }
+    get t3() {
+      return this[t3];
+    }
+    set t3(value) {
+      super.t3 = value;
+    }
+    get t4() {
+      return this[t4];
+    }
+    set t4(value) {
+      super.t4 = value;
+    }
+    get ff() {
+      return this[ff];
+    }
+    set ff(value) {
+      super.ff = value;
+    }
+    get ffvi() {
+      return this[ffvi];
+    }
+    set ffvi(value) {
+      super.ffvi = value;
+    }
+    get ffvii() {
+      return this[ffvii];
+    }
+    set ffvii(value) {
+      super.ffvii = value;
+    }
+    get ffviii() {
+      return this[ffviii];
+    }
+    set ffviii(value) {
+      super.ffviii = value;
+    }
+    get ffix() {
+      return this[ffix];
+    }
+    set ffix(value) {
+      super.ffix = value;
+    }
+    get ffx() {
+      return this[ffx];
+    }
+    set ffx(value) {
+      super.ffx = value;
+    }
+    get bd() {
+      return this[bd];
+    }
+    set bd(value) {
+      super.bd = value;
+    }
+    get lo() {
+      return this[lo];
+    }
+    set lo(value) {
+      super.lo = value;
+    }
+    get tls() {
+      return this[tls];
+    }
+    set tls(value) {
+      super.tls = value;
+    }
+    get dw() {
+      return this[dw];
+    }
+    set dw(value) {
+      super.dw = value;
+    }
+    get tj() {
+      return this[tj];
+    }
+    set tj(value) {
+      super.tj = value;
+    }
+    get nw() {
+      return this[nw];
+    }
+    set nw(value) {
+      super.nw = value;
+    }
+    get bm() {
+      return this[bm];
+    }
+    set bm(value) {
+      super.bm = value;
+    }
     static ['_#new#tearOff'](opts) {
       let key = opts && 'key' in opts ? opts.key : null;
       return new TrabalhosPag.TrabalhosPag.new({key: key});
     }
     build(context) {
-      return new scaffold.Scaffold.new({appBar: new preferred_size.PreferredSize.new({preferredSize: new ui.Size.fromHeight(60), child: new container.Container.new({decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 183, 212, 220), boxShadow: T.JSArrayOfBoxShadow().of([new box_shadow.BoxShadow.new({color: colors.Colors.black.withOpacity(0.3), spreadRadius: 0, blurRadius: 10, offset: new ui.Offset.new(0, 4)})])}), child: new app_bar.AppBar.new({title: C[31] || CT.C31, centerTitle: true, backgroundColor: new ui.Color.new(0), elevation: 0})})}), backgroundColor: C[1] || CT.C1, body: new basic.Center.new({child: new container.Container.new({margin: C[12] || CT.C12, decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 160, 212, 220), borderRadius: new border_radius.BorderRadius.circular(8)}), padding: C[13] || CT.C13, child: C[32] || CT.C32})})});
+      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({title: C[39] || CT.C39, centerTitle: true, backgroundColor: new ui.Color.fromARGB(255, 183, 212, 220)}), backgroundColor: C[1] || CT.C1, body: new scroll_view.ListView.new({padding: C[11] || CT.C11, children: (() => {
+            let t1 = T.JSArrayOfWidget().of([this.buildSection(this.imgT1, this.descT1.texto, this.t1)]);
+            t1[$addAll](this.buildJogos(T.JSArrayOfCJogo().of([this.ff, this.ffvi, this.ffvii, this.ffviii, this.ffix, this.ffx])));
+            t1.push(this.buildSection(this.imgT2, this.descT2.texto, this.t2));
+            t1[$addAll](this.buildJogos(T.JSArrayOfCJogo().of([this.bd, this.lo, this.tls])));
+            t1.push(this.buildSection(this.imgT3, null, this.t3));
+            t1[$addAll](this.buildJogos(T.JSArrayOfCJogo().of([this.dw, this.tj, this.nw, this.bm])));
+            t1.push(this.buildSection(this.imgT4, null, this.t4));
+            return t1;
+          })()})});
+    }
+    buildSection(img, texto, trabalho) {
+      return new container.Container.new({decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 160, 212, 220), borderRadius: new border_radius.BorderRadius.circular(8)}), padding: C[26] || CT.C26, margin: C[40] || CT.C40, child: new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: (() => {
+            let t2 = T.JSArrayOfWidget().of([new container.Container.new({width: 1 / 0, height: 190, decoration: new box_decoration.BoxDecoration.new({borderRadius: new border_radius.BorderRadius.circular(8), image: new decoration_image.DecorationImage.new({image: new image_resolution.AssetImage.new(img.img), fit: box_fit.BoxFit.cover})})})]);
+            if (texto != null) t2[$addAll](T.JSArrayOfWidget().of([C[41] || CT.C41, new text.Text.new(texto, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontSize: 17, color: colors.Colors.black})}), C[15] || CT.C15]));
+            t2.push(new text.Text.new(trabalho.empresa, {style: new text_style.TextStyle.new({fontSize: 17, fontWeight: ui.FontWeight.bold})}));
+            t2.push(C[42] || CT.C42);
+            t2.push(new text.Text.new(trabalho.resumo, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontSize: 17, color: colors.Colors.black})}));
+            return t2;
+          })()})});
+    }
+    buildJogos(jogos) {
+      return jogos[$map](container.Container, dart.fn(jogo => new container.Container.new({decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 160, 212, 220), borderRadius: new border_radius.BorderRadius.circular(8)}), padding: C[26] || CT.C26, margin: C[40] || CT.C40, child: new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new text.Text.new(jogo.jogo, {style: new text_style.TextStyle.new({fontSize: 17, fontWeight: ui.FontWeight.bold})}), C[42] || CT.C42, new text.Text.new(jogo.participacao, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontSize: 17, color: colors.Colors.black})})])})}), T.CJogoToContainer()))[$toList]();
     }
   };
   (TrabalhosPag.TrabalhosPag.new = function(opts) {
     let key = opts && 'key' in opts ? opts.key : null;
+    this[descT1] = new main$.CDesc1.new("   Nobuo Uematsu é um dos compositores mais icônicos da indústria dos games, conhecido principalmente por suas contribuições para a série Final Fantasy.", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
+    this[descT2] = new main$.CDesc1.new("   Uematsu deixou a Square Enix em 2004 para explorar novos horizontes, mas continuou a colaborar em projetos da franquia Final Fantasy em alguns jogos subsequentes.", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
+    this[imgT1] = new main$.CImg.new("assets/img/Nobuo4.png", "", 1);
+    this[imgT2] = new main$.CImg.new("assets/img/Nobuo4.png", "", 1);
+    this[imgT3] = new main$.CImg.new("assets/img/Nobuo4.png", "", 1);
+    this[imgT4] = new main$.CImg.new("assets/img/Nobuo4.png", "", 1);
+    this[t1] = new TrabalhosPag.CTrabalho.new("  Square (1986)", " Durante esse período, ele compôs para vários jogos, mas se destacou mesmo ao criar as trilhas sonoras da franquia Final Fantasy, que se tornaram clássicos:");
+    this[t2] = new TrabalhosPag.CTrabalho.new("  Smile Please e Dog Ear Records (2004)", " Após sair da Square Enix, Uematsu fundou seu próprio estúdio, Smile Please, e a gravadora Dog Ear Records em 2004. Essas entidades permitiram que ele tivesse mais liberdade criativa e trabalhasse em projetos variados:");
+    this[t3] = new TrabalhosPag.CTrabalho.new("  Concertos", " Além dos jogos, Nobuo Uematsu tem uma presença forte no mundo dos concertos de música de videogame:");
+    this[t4] = new TrabalhosPag.CTrabalho.new("  Legado", " Uematsu é amplamente considerado um dos maiores compositores de videogame de todos os tempos. Seu trabalho não só ajudou a definir a identidade musical de Final Fantasy, mas também influenciou como a música de videogame é percebida mundialmente.");
+    this[ff] = new TrabalhosPag.CJogo.new("  Final Fantasy (1987):", "  A trilha que deu início à sua fama, com o tema \"Prelude\" se tornando um ícone da série.");
+    this[ffvi] = new TrabalhosPag.CJogo.new("  Final Fantasy VI (1994):", "  Considerada uma de suas melhores trilhas sonoras, com músicas memoráveis como \"Terra's Theme\".");
+    this[ffvii] = new TrabalhosPag.CJogo.new("  Final Fantasy VII (1997):", "  Talvez sua obra mais famosa, especialmente pela faixa \"One-Winged Angel\", que marcou o antagonista Sephiroth.");
+    this[ffviii] = new TrabalhosPag.CJogo.new("  Final Fantasy VIII (1999):", "  A música \"Eyes on Me\", cantada por Faye Wong, foi um grande sucesso e ganhou um prêmio de melhor música de videogame.");
+    this[ffix] = new TrabalhosPag.CJogo.new("  Final Fantasy IX (2000):", "  Outro marco na sua carreira, trazendo uma sonoridade nostálgica e melodias emocionantes.");
+    this[ffx] = new TrabalhosPag.CJogo.new("  Final Fantasy X (2001):", "  O primeiro jogo da série a incluir dublagem, com a trilha sonora igualmente impactante. A faixa \"To Zanarkand\" é uma das mais aclamadas.");
+    this[bd] = new TrabalhosPag.CJogo.new("  Blue Dragon (2006):", "  Jogo desenvolvido pela Mistwalker, a empresa de Hironobu Sakaguchi, criador de Final Fantasy. Uematsu compôs a trilha sonora, que foi bastante elogiada.");
+    this[lo] = new TrabalhosPag.CJogo.new("  Lost Odyssey (2007):", "  Outro projeto em colaboração com Sakaguchi na Mistwalker. A música tem o estilo emocional característico de Uematsu.");
+    this[tls] = new TrabalhosPag.CJogo.new("  The Last Story (2011):", "  Mais um trabalho com a Mistwalker, onde ele trouxe uma trilha sonora rica para complementar o RPG.");
+    this[dw] = new TrabalhosPag.CJogo.new("  Distant Worlds: Music from Final Fantasy:", "  Esse concerto tem sido realizado mundialmente desde 2007, apresentando orquestras sinfônicas tocando suas obras mais famosas de Final Fantasy.");
+    this[tj] = new TrabalhosPag.CJogo.new("  Tour de Japon:", "  Concerto focado em Final Fantasy que aconteceu exclusivamente no Japão em 2004 e 2005.");
+    this[nw] = new TrabalhosPag.CJogo.new("  A New World: Intimate Music from Final Fantasy:", "  Versão mais compacta e intimista dos concertos de Distant Worlds, com arranjos orquestrais menores.");
+    this[bm] = new TrabalhosPag.CJogo.new("  The Black Mages:", "  Uematsu fundou essa banda de rock progressivo para tocar versões mais pesadas das músicas de Final Fantasy.");
     TrabalhosPag.TrabalhosPag.__proto__.new.call(this, {key: key});
     ;
   }).prototype = TrabalhosPag.TrabalhosPag.prototype;
@@ -885,18 +1630,1254 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   dart.addTypeCaches(TrabalhosPag.TrabalhosPag);
   dart.setMethodSignature(TrabalhosPag.TrabalhosPag, () => ({
     __proto__: dart.getMethods(TrabalhosPag.TrabalhosPag.__proto__),
-    build: dart.fnType(framework.Widget, [framework.BuildContext])
+    build: dart.fnType(framework.Widget, [framework.BuildContext]),
+    buildSection: dart.fnType(framework.Widget, [main$.CImg, dart.nullable(core.String), TrabalhosPag.CTrabalho]),
+    buildJogos: dart.fnType(core.List$(framework.Widget), [core.List$(TrabalhosPag.CJogo)])
   }));
   dart.setLibraryUri(TrabalhosPag.TrabalhosPag, I[3]);
+  dart.setFieldSignature(TrabalhosPag.TrabalhosPag, () => ({
+    __proto__: dart.getFields(TrabalhosPag.TrabalhosPag.__proto__),
+    descT1: dart.finalFieldType(main$.CDesc1),
+    descT2: dart.finalFieldType(main$.CDesc1),
+    imgT1: dart.finalFieldType(main$.CImg),
+    imgT2: dart.finalFieldType(main$.CImg),
+    imgT3: dart.finalFieldType(main$.CImg),
+    imgT4: dart.finalFieldType(main$.CImg),
+    t1: dart.finalFieldType(TrabalhosPag.CTrabalho),
+    t2: dart.finalFieldType(TrabalhosPag.CTrabalho),
+    t3: dart.finalFieldType(TrabalhosPag.CTrabalho),
+    t4: dart.finalFieldType(TrabalhosPag.CTrabalho),
+    ff: dart.finalFieldType(TrabalhosPag.CJogo),
+    ffvi: dart.finalFieldType(TrabalhosPag.CJogo),
+    ffvii: dart.finalFieldType(TrabalhosPag.CJogo),
+    ffviii: dart.finalFieldType(TrabalhosPag.CJogo),
+    ffix: dart.finalFieldType(TrabalhosPag.CJogo),
+    ffx: dart.finalFieldType(TrabalhosPag.CJogo),
+    bd: dart.finalFieldType(TrabalhosPag.CJogo),
+    lo: dart.finalFieldType(TrabalhosPag.CJogo),
+    tls: dart.finalFieldType(TrabalhosPag.CJogo),
+    dw: dart.finalFieldType(TrabalhosPag.CJogo),
+    tj: dart.finalFieldType(TrabalhosPag.CJogo),
+    nw: dart.finalFieldType(TrabalhosPag.CJogo),
+    bm: dart.finalFieldType(TrabalhosPag.CJogo)
+  }));
+  var _isSafari = dart.privateName(url_launcher_web, "_isSafari");
+  var _window = dart.privateName(url_launcher_web, "_window");
+  plugin_platform_interface.PlatformInterface = class PlatformInterface extends core.Object {
+    static verify(instance, token) {
+      plugin_platform_interface.PlatformInterface._verify(instance, token, {preventConstObject: true});
+    }
+    static verifyToken(instance, token) {
+      plugin_platform_interface.PlatformInterface._verify(instance, token, {preventConstObject: false});
+    }
+    static _verify(instance, token, opts) {
+      let preventConstObject = opts && 'preventConstObject' in opts ? opts.preventConstObject : null;
+      if (plugin_platform_interface.MockPlatformInterfaceMixin.is(instance)) {
+        let assertionsEnabled = false;
+        if (!dart.fn(() => {
+          assertionsEnabled = true;
+          return true;
+        }, T.VoidTobool())()) dart.assertFailed(null, I[4], 92, 14, "() {\n        assertionsEnabled = true;\n        return true;\n      }()");
+        if (!assertionsEnabled) {
+          dart.throw(new core.AssertionError.new("`MockPlatformInterfaceMixin` is not intended for use in release builds."));
+        }
+        return;
+      }
+      if (preventConstObject && plugin_platform_interface.PlatformInterface._instanceTokens._get(instance) === (C[44] || CT.C44)) {
+        dart.throw(new core.AssertionError.new("`const Object()` cannot be used as the token."));
+      }
+      if (token !== plugin_platform_interface.PlatformInterface._instanceTokens._get(instance)) {
+        dart.throw(new core.AssertionError.new("Platform interfaces must not be implemented with `implements`"));
+      }
+    }
+  };
+  (plugin_platform_interface.PlatformInterface.new = function(opts) {
+    let token = opts && 'token' in opts ? opts.token : null;
+    plugin_platform_interface.PlatformInterface._instanceTokens._set(this, token);
+  }).prototype = plugin_platform_interface.PlatformInterface.prototype;
+  dart.addTypeTests(plugin_platform_interface.PlatformInterface);
+  dart.addTypeCaches(plugin_platform_interface.PlatformInterface);
+  dart.setStaticMethodSignature(plugin_platform_interface.PlatformInterface, () => ['verify', 'verifyToken', '_verify']);
+  dart.setLibraryUri(plugin_platform_interface.PlatformInterface, I[5]);
+  dart.setStaticFieldSignature(plugin_platform_interface.PlatformInterface, () => ['_instanceTokens']);
+  dart.defineLazy(plugin_platform_interface.PlatformInterface, {
+    /*plugin_platform_interface.PlatformInterface._instanceTokens*/get _instanceTokens() {
+      return new (T.ExpandoOfObject()).new();
+    }
+  }, false);
+  url_launcher_platform.UrlLauncherPlatform = class UrlLauncherPlatform extends plugin_platform_interface.PlatformInterface {
+    static get instance() {
+      return url_launcher_platform.UrlLauncherPlatform._instance;
+    }
+    static set instance(instance) {
+      plugin_platform_interface.PlatformInterface.verify(instance, url_launcher_platform.UrlLauncherPlatform._token);
+      url_launcher_platform.UrlLauncherPlatform._instance = instance;
+    }
+    canLaunch(url) {
+      dart.throw(new core.UnimplementedError.new("canLaunch() has not been implemented."));
+    }
+    launch(url, opts) {
+      let useSafariVC = opts && 'useSafariVC' in opts ? opts.useSafariVC : null;
+      let useWebView = opts && 'useWebView' in opts ? opts.useWebView : null;
+      let enableJavaScript = opts && 'enableJavaScript' in opts ? opts.enableJavaScript : null;
+      let enableDomStorage = opts && 'enableDomStorage' in opts ? opts.enableDomStorage : null;
+      let universalLinksOnly = opts && 'universalLinksOnly' in opts ? opts.universalLinksOnly : null;
+      let headers = opts && 'headers' in opts ? opts.headers : null;
+      let webOnlyWindowName = opts && 'webOnlyWindowName' in opts ? opts.webOnlyWindowName : null;
+      dart.throw(new core.UnimplementedError.new("launch() has not been implemented."));
+    }
+    launchUrl(url, options) {
+      let isWebURL = url[$startsWith]("http:") || url[$startsWith]("https:");
+      let useWebView = options.mode === types$.PreferredLaunchMode.inAppWebView || options.mode === types$.PreferredLaunchMode.inAppBrowserView || isWebURL && options.mode === types$.PreferredLaunchMode.platformDefault;
+      return this.launch(url, {useSafariVC: useWebView, useWebView: useWebView, enableJavaScript: options.webViewConfiguration.enableJavaScript, enableDomStorage: options.webViewConfiguration.enableDomStorage, universalLinksOnly: options.mode === types$.PreferredLaunchMode.externalNonBrowserApplication, headers: options.webViewConfiguration.headers, webOnlyWindowName: options.webOnlyWindowName});
+    }
+    closeWebView() {
+      dart.throw(new core.UnimplementedError.new("closeWebView() has not been implemented."));
+    }
+    supportsMode(mode) {
+      return T.FutureOfbool().value(mode === types$.PreferredLaunchMode.platformDefault);
+    }
+    supportsCloseForMode(mode) {
+      return T.FutureOfbool().value(mode === types$.PreferredLaunchMode.inAppWebView);
+    }
+  };
+  (url_launcher_platform.UrlLauncherPlatform.new = function() {
+    url_launcher_platform.UrlLauncherPlatform.__proto__.new.call(this, {token: url_launcher_platform.UrlLauncherPlatform._token});
+    ;
+  }).prototype = url_launcher_platform.UrlLauncherPlatform.prototype;
+  dart.addTypeTests(url_launcher_platform.UrlLauncherPlatform);
+  dart.addTypeCaches(url_launcher_platform.UrlLauncherPlatform);
+  dart.setMethodSignature(url_launcher_platform.UrlLauncherPlatform, () => ({
+    __proto__: dart.getMethods(url_launcher_platform.UrlLauncherPlatform.__proto__),
+    canLaunch: dart.fnType(async.Future$(core.bool), [core.String]),
+    launch: dart.fnType(async.Future$(core.bool), [core.String], {webOnlyWindowName: dart.nullable(core.String)}, {enableDomStorage: core.bool, enableJavaScript: core.bool, headers: core.Map$(core.String, core.String), universalLinksOnly: core.bool, useSafariVC: core.bool, useWebView: core.bool}),
+    launchUrl: dart.fnType(async.Future$(core.bool), [core.String, types$.LaunchOptions]),
+    closeWebView: dart.fnType(async.Future$(dart.void), []),
+    supportsMode: dart.fnType(async.Future$(core.bool), [types$.PreferredLaunchMode]),
+    supportsCloseForMode: dart.fnType(async.Future$(core.bool), [types$.PreferredLaunchMode])
+  }));
+  dart.setStaticGetterSignature(url_launcher_platform.UrlLauncherPlatform, () => ['instance']);
+  dart.setStaticSetterSignature(url_launcher_platform.UrlLauncherPlatform, () => ['instance']);
+  dart.setLibraryUri(url_launcher_platform.UrlLauncherPlatform, I[6]);
+  dart.setStaticFieldSignature(url_launcher_platform.UrlLauncherPlatform, () => ['_token', '_instance']);
+  dart.defineLazy(url_launcher_platform.UrlLauncherPlatform, {
+    /*url_launcher_platform.UrlLauncherPlatform._token*/get _token() {
+      return new core.Object.new();
+    },
+    /*url_launcher_platform.UrlLauncherPlatform._instance*/get _instance() {
+      return new method_channel_url_launcher.MethodChannelUrlLauncher.new();
+    },
+    set _instance(value) {}
+  }, false);
+  url_launcher_web.UrlLauncherPlugin = class UrlLauncherPlugin extends url_launcher_platform.UrlLauncherPlatform {
+    static ['_#new#tearOff'](opts) {
+      let debugWindow = opts && 'debugWindow' in opts ? opts.debugWindow : null;
+      return new url_launcher_web.UrlLauncherPlugin.new({debugWindow: debugWindow});
+    }
+    static registerWith(registrar) {
+      url_launcher_platform.UrlLauncherPlatform.instance = new url_launcher_web.UrlLauncherPlugin.new();
+      ui.platformViewRegistry.registerViewFactory("__url_launcher::link", link$.linkViewFactory, {isVisible: false});
+    }
+    get linkDelegate() {
+      return dart.fn(linkInfo => new link$.WebLinkDelegate.new(linkInfo), T.LinkInfoToWebLinkDelegate());
+    }
+    openNewWindow(url, opts) {
+      let t3;
+      let webOnlyWindowName = opts && 'webOnlyWindowName' in opts ? opts.webOnlyWindowName : null;
+      let target = (t3 = webOnlyWindowName, t3 == null ? this[_isSafari] && url_launcher_web._isSafariTargetTopScheme(url) ? "_top" : "" : t3);
+      return this[_window][$open](url, target);
+    }
+    canLaunch(url) {
+      return T.FutureOfbool().value(url_launcher_web.UrlLauncherPlugin._supportedSchemes.contains(url_launcher_web._getUrlScheme(url)));
+    }
+    launch(url, opts) {
+      let useSafariVC = opts && 'useSafariVC' in opts ? opts.useSafariVC : false;
+      let useWebView = opts && 'useWebView' in opts ? opts.useWebView : false;
+      let enableJavaScript = opts && 'enableJavaScript' in opts ? opts.enableJavaScript : false;
+      let enableDomStorage = opts && 'enableDomStorage' in opts ? opts.enableDomStorage : false;
+      let universalLinksOnly = opts && 'universalLinksOnly' in opts ? opts.universalLinksOnly : false;
+      let headers = opts && 'headers' in opts ? opts.headers : C[43] || CT.C43;
+      let webOnlyWindowName = opts && 'webOnlyWindowName' in opts ? opts.webOnlyWindowName : null;
+      return async.async(core.bool, (function* launch() {
+        this.openNewWindow(url, {webOnlyWindowName: webOnlyWindowName});
+        return true;
+      }).bind(this));
+    }
+  };
+  (url_launcher_web.UrlLauncherPlugin.new = function(opts) {
+    let t3;
+    let debugWindow = opts && 'debugWindow' in opts ? opts.debugWindow : null;
+    this[_isSafari] = false;
+    this[_window] = (t3 = debugWindow, t3 == null ? html.window : t3);
+    url_launcher_web.UrlLauncherPlugin.__proto__.new.call(this);
+    this[_isSafari] = url_launcher_web._navigatorIsSafari(this[_window][$navigator]);
+  }).prototype = url_launcher_web.UrlLauncherPlugin.prototype;
+  dart.addTypeTests(url_launcher_web.UrlLauncherPlugin);
+  dart.addTypeCaches(url_launcher_web.UrlLauncherPlugin);
+  dart.setMethodSignature(url_launcher_web.UrlLauncherPlugin, () => ({
+    __proto__: dart.getMethods(url_launcher_web.UrlLauncherPlugin.__proto__),
+    openNewWindow: dart.fnType(html.WindowBase, [core.String], {webOnlyWindowName: dart.nullable(core.String)}, {}),
+    launch: dart.fnType(async.Future$(core.bool), [core.String], {enableDomStorage: core.bool, enableJavaScript: core.bool, headers: core.Map$(core.String, core.String), universalLinksOnly: core.bool, useSafariVC: core.bool, useWebView: core.bool, webOnlyWindowName: dart.nullable(core.String)}, {})
+  }));
+  dart.setStaticMethodSignature(url_launcher_web.UrlLauncherPlugin, () => ['registerWith']);
+  dart.setGetterSignature(url_launcher_web.UrlLauncherPlugin, () => ({
+    __proto__: dart.getGetters(url_launcher_web.UrlLauncherPlugin.__proto__),
+    linkDelegate: dart.fnType(framework.Widget, [link.LinkInfo])
+  }));
+  dart.setLibraryUri(url_launcher_web.UrlLauncherPlugin, I[7]);
+  dart.setFieldSignature(url_launcher_web.UrlLauncherPlugin, () => ({
+    __proto__: dart.getFields(url_launcher_web.UrlLauncherPlugin.__proto__),
+    [_window]: dart.finalFieldType(html.Window),
+    [_isSafari]: dart.fieldType(core.bool)
+  }));
+  dart.setStaticFieldSignature(url_launcher_web.UrlLauncherPlugin, () => ['_supportedSchemes']);
+  dart.defineLazy(url_launcher_web.UrlLauncherPlugin, {
+    /*url_launcher_web.UrlLauncherPlugin._supportedSchemes*/get _supportedSchemes() {
+      return T.LinkedHashSetOfString().from(["http", "https"]).union(url_launcher_web._safariTargetTopSchemes);
+    }
+  }, false);
+  url_launcher_web._getUrlScheme = function _getUrlScheme(url) {
+    let t3;
+    t3 = core.Uri.tryParse(url);
+    return t3 == null ? null : t3.scheme;
+  };
+  url_launcher_web._isSafariTargetTopScheme = function _isSafariTargetTopScheme(url) {
+    return url_launcher_web._safariTargetTopSchemes.contains(url_launcher_web._getUrlScheme(url));
+  };
+  url_launcher_web._navigatorIsSafari = function _navigatorIsSafari(navigator) {
+    return navigator[$userAgent][$contains]("Safari") && !navigator[$userAgent][$contains]("Chrome");
+  };
+  dart.defineLazy(url_launcher_web, {
+    /*url_launcher_web._safariTargetTopSchemes*/get _safariTargetTopSchemes() {
+      return C[45] || CT.C45;
+    }
+  }, false);
+  var texto$0 = dart.privateName(main$, "CDesc1.texto");
+  var fonte$0 = dart.privateName(main$, "CDesc1.fonte");
+  var tamanho$0 = dart.privateName(main$, "CDesc1.tamanho");
+  var cor$0 = dart.privateName(main$, "CDesc1.cor");
+  var titulo$1 = dart.privateName(main$, "CDesc1.titulo");
+  var posicao$1 = dart.privateName(main$, "CDesc1.posicao");
+  var subtitulo$0 = dart.privateName(main$, "CDesc1.subtitulo");
+  main$.CDesc1 = class CDesc1 extends core.Object {
+    get texto() {
+      return this[texto$0];
+    }
+    set texto(value) {
+      this[texto$0] = value;
+    }
+    get fonte() {
+      return this[fonte$0];
+    }
+    set fonte(value) {
+      this[fonte$0] = value;
+    }
+    get tamanho() {
+      return this[tamanho$0];
+    }
+    set tamanho(value) {
+      this[tamanho$0] = value;
+    }
+    get cor() {
+      return this[cor$0];
+    }
+    set cor(value) {
+      this[cor$0] = value;
+    }
+    get titulo() {
+      return this[titulo$1];
+    }
+    set titulo(value) {
+      this[titulo$1] = value;
+    }
+    get posicao() {
+      return this[posicao$1];
+    }
+    set posicao(value) {
+      this[posicao$1] = value;
+    }
+    get subtitulo() {
+      return this[subtitulo$0];
+    }
+    set subtitulo(value) {
+      this[subtitulo$0] = value;
+    }
+    static ['_#new#tearOff'](texto, fonte, titulo, subtitulo, tamanho, cor, posicao) {
+      return new main$.CDesc1.new(texto, fonte, titulo, subtitulo, tamanho, cor, posicao);
+    }
+  };
+  (main$.CDesc1.new = function(texto, fonte, titulo, subtitulo, tamanho, cor, posicao) {
+    this[texto$0] = texto;
+    this[fonte$0] = fonte;
+    this[titulo$1] = titulo;
+    this[subtitulo$0] = subtitulo;
+    this[tamanho$0] = tamanho;
+    this[cor$0] = cor;
+    this[posicao$1] = posicao;
+    ;
+  }).prototype = main$.CDesc1.prototype;
+  dart.addTypeTests(main$.CDesc1);
+  dart.addTypeCaches(main$.CDesc1);
+  dart.setLibraryUri(main$.CDesc1, I[8]);
+  dart.setFieldSignature(main$.CDesc1, () => ({
+    __proto__: dart.getFields(main$.CDesc1.__proto__),
+    texto: dart.fieldType(core.String),
+    fonte: dart.fieldType(core.String),
+    tamanho: dart.fieldType(core.int),
+    cor: dart.fieldType(core.int),
+    titulo: dart.fieldType(core.String),
+    posicao: dart.fieldType(core.int),
+    subtitulo: dart.fieldType(core.String)
+  }));
+  var img$0 = dart.privateName(main$, "CImg.img");
+  var posicao$2 = dart.privateName(main$, "CImg.posicao");
+  var legenda$0 = dart.privateName(main$, "CImg.legenda");
+  main$.CImg = class CImg extends core.Object {
+    get img() {
+      return this[img$0];
+    }
+    set img(value) {
+      this[img$0] = value;
+    }
+    get posicao() {
+      return this[posicao$2];
+    }
+    set posicao(value) {
+      this[posicao$2] = value;
+    }
+    get legenda() {
+      return this[legenda$0];
+    }
+    set legenda(value) {
+      this[legenda$0] = value;
+    }
+    static ['_#new#tearOff'](img, legenda, posicao) {
+      return new main$.CImg.new(img, legenda, posicao);
+    }
+  };
+  (main$.CImg.new = function(img, legenda, posicao) {
+    this[img$0] = img;
+    this[legenda$0] = legenda;
+    this[posicao$2] = posicao;
+    ;
+  }).prototype = main$.CImg.prototype;
+  dart.addTypeTests(main$.CImg);
+  dart.addTypeCaches(main$.CImg);
+  dart.setLibraryUri(main$.CImg, I[8]);
+  dart.setFieldSignature(main$.CImg, () => ({
+    __proto__: dart.getFields(main$.CImg.__proto__),
+    img: dart.fieldType(core.String),
+    posicao: dart.fieldType(core.int),
+    legenda: dart.fieldType(core.String)
+  }));
+  var MyHomePage_title$ = dart.privateName(main$, "MyHomePage.title");
+  main$.MyApp = class MyApp extends framework.StatelessWidget {
+    static ['_#new#tearOff'](opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      return new main$.MyApp.new({key: key});
+    }
+    build(context) {
+      return new app.MaterialApp.new({debugShowCheckedModeBanner: false, title: "Nobuo Uematsu", theme: theme_data.ThemeData.new({fontFamily: "Roboto", scaffoldBackgroundColor: C[1] || CT.C1, colorScheme: color_scheme.ColorScheme.fromSeed({seedColor: new ui.Color.new(4294967295)}), useMaterial3: true}), home: C[46] || CT.C46});
+    }
+  };
+  (main$.MyApp.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    main$.MyApp.__proto__.new.call(this, {key: key});
+    ;
+  }).prototype = main$.MyApp.prototype;
+  dart.addTypeTests(main$.MyApp);
+  dart.addTypeCaches(main$.MyApp);
+  dart.setMethodSignature(main$.MyApp, () => ({
+    __proto__: dart.getMethods(main$.MyApp.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(main$.MyApp, I[8]);
+  const title$0 = MyHomePage_title$;
+  main$.MyHomePage = class MyHomePage extends framework.StatefulWidget {
+    get title() {
+      return this[title$0];
+    }
+    set title(value) {
+      super.title = value;
+    }
+    static ['_#new#tearOff'](opts) {
+      let title = opts && 'title' in opts ? opts.title : null;
+      let key = opts && 'key' in opts ? opts.key : null;
+      return new main$.MyHomePage.new({title: title, key: key});
+    }
+    createState() {
+      return new main$._MyHomePageState.new();
+    }
+  };
+  (main$.MyHomePage.new = function(opts) {
+    let title = opts && 'title' in opts ? opts.title : null;
+    let key = opts && 'key' in opts ? opts.key : null;
+    this[title$0] = title;
+    main$.MyHomePage.__proto__.new.call(this, {key: key});
+    ;
+  }).prototype = main$.MyHomePage.prototype;
+  dart.addTypeTests(main$.MyHomePage);
+  dart.addTypeCaches(main$.MyHomePage);
+  dart.setMethodSignature(main$.MyHomePage, () => ({
+    __proto__: dart.getMethods(main$.MyHomePage.__proto__),
+    createState: dart.fnType(framework.State$(main$.MyHomePage), [])
+  }));
+  dart.setLibraryUri(main$.MyHomePage, I[8]);
+  dart.setFieldSignature(main$.MyHomePage, () => ({
+    __proto__: dart.getFields(main$.MyHomePage.__proto__),
+    title: dart.finalFieldType(core.String)
+  }));
+  main$._MyHomePageState = class _MyHomePageState extends framework.State$(main$.MyHomePage) {
+    build(context) {
+      return new scaffold.Scaffold.new({appBar: new preferred_size.PreferredSize.new({preferredSize: new ui.Size.fromHeight(60), child: new container.Container.new({decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 183, 212, 220), boxShadow: T.JSArrayOfBoxShadow().of([new box_shadow.BoxShadow.new({color: colors.Colors.black.withOpacity(0.3), spreadRadius: 0, blurRadius: 10, offset: new ui.Offset.new(0, 4)})])}), child: new app_bar.AppBar.new({title: new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidget().of([new icon_button.IconButton.new({onPressed: dart.fn(() => {
+                      navigator.Navigator.push(dart.dynamic, context, new page.MaterialPageRoute.new({builder: dart.fn(context => new ArtistaPag.ArtistaPag.new(), T.BuildContextToArtistaPag())}));
+                    }, T.VoidTovoid()), icon: C[3] || CT.C3}), C[6] || CT.C6, new icon_button.IconButton.new({onPressed: dart.fn(() => {
+                      navigator.Navigator.push(dart.dynamic, context, new page.MaterialPageRoute.new({builder: dart.fn(context => new TrabalhosPag.TrabalhosPag.new(), T.BuildContextToTrabalhosPag())}));
+                    }, T.VoidTovoid()), icon: C[7] || CT.C7}), C[6] || CT.C6, new icon_button.IconButton.new({onPressed: dart.fn(() => {
+                      navigator.Navigator.push(dart.dynamic, context, new page.MaterialPageRoute.new({builder: dart.fn(context => new MusicasPag.MusicasPag.new(), T.BuildContextToMusicasPag())}));
+                    }, T.VoidTovoid()), icon: C[9] || CT.C9})])}), backgroundColor: new ui.Color.new(0), elevation: 0, centerTitle: true})})}), body: new scroll_view.ListView.new({children: T.JSArrayOfWidget().of([new container.Container.new({margin: C[11] || CT.C11, decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.fromARGB(255, 160, 212, 220), borderRadius: new border_radius.BorderRadius.circular(8)}), padding: C[12] || CT.C12, child: new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new basic.Row.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new container.Container.new({width: 175, height: 175, decoration: new box_decoration.BoxDecoration.new({borderRadius: new border_radius.BorderRadius.circular(8), image: new decoration_image.DecorationImage.new({image: new image_resolution.AssetImage.new(this.img1.img), fit: box_fit.BoxFit.cover})})}), C[13] || CT.C13, new basic.Expanded.new({child: new text.Text.new(this.desc1.texto, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontFamily: this.desc1.fonte, fontSize: this.desc1.tamanho[$toDouble](), color: new ui.Color.new(this.desc1.cor)})})})])}), C[14] || CT.C14, new text.Text.new(this.desc2.texto, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontFamily: this.desc2.fonte, fontSize: this.desc2.tamanho[$toDouble](), color: new ui.Color.new(this.desc2.cor)})}), C[15] || CT.C15, new basic.Row.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new basic.Expanded.new({child: new text.Text.new(this.desc3.texto, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontFamily: this.desc3.fonte, fontSize: this.desc3.tamanho[$toDouble](), color: new ui.Color.new(this.desc3.cor)})})}), C[13] || CT.C13, new container.Container.new({width: 175, height: 175, decoration: new box_decoration.BoxDecoration.new({borderRadius: new border_radius.BorderRadius.circular(8), image: new decoration_image.DecorationImage.new({image: new image_resolution.AssetImage.new(this.img2.img), fit: box_fit.BoxFit.cover})})})])}), C[15] || CT.C15, new text.Text.new(this.desc4.texto, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontFamily: this.desc4.fonte, fontSize: this.desc4.tamanho[$toDouble](), color: new ui.Color.new(this.desc4.cor)})}), C[15] || CT.C15, new basic.Row.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new container.Container.new({width: 175, height: 175, decoration: new box_decoration.BoxDecoration.new({borderRadius: new border_radius.BorderRadius.circular(8), image: new decoration_image.DecorationImage.new({image: new image_resolution.AssetImage.new(this.img3.img), fit: box_fit.BoxFit.cover})})}), C[13] || CT.C13, new basic.Expanded.new({child: new text.Text.new(this.desc5.texto, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontFamily: this.desc5.fonte, fontSize: this.desc5.tamanho[$toDouble](), color: new ui.Color.new(this.desc5.cor)})})})])}), C[15] || CT.C15, new text.Text.new(this.desc6.texto, {textAlign: ui.TextAlign.justify, style: new text_style.TextStyle.new({fontFamily: this.desc6.fonte, fontSize: this.desc6.tamanho[$toDouble](), color: new ui.Color.new(this.desc6.cor)})})])})}), C[15] || CT.C15])})});
+    }
+    static ['_#new#tearOff']() {
+      return new main$._MyHomePageState.new();
+    }
+  };
+  (main$._MyHomePageState.new = function() {
+    this.desc1 = new main$.CDesc1.new("   Nobuo Uematsu,  nascido em 21 de março de 1959, é um dos compositores mais renomados da indústria dos videogames.", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
+    this.desc2 = new main$.CDesc1.new("   Uematsu desde cedo mostrou interesse pela música, inicialmente se inspirando em artistas ocidentais, como Elton John, para explorar sua paixão musical. Embora tenha começado a tocar piano ainda jovem, ele é, na maioria, um autodidata, o que demonstra seu talento natural e dedicação à arte.", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
+    this.desc3 = new main$.CDesc1.new("   Em 1985, ele começou a trabalhar na Square (atual Square Enix), uma empresa de videogames onde sua carreira como compositor de trilhas sonoras floresceu.", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
+    this.desc4 = new main$.CDesc1.new("  Ele se tornou amplamente conhecido por sua habilidade em combinar melodias épicas e emocionantes com narrativas profundas e envolventes dos jogos. Suas composições têm um alcance emocional único, misturando influências clássicas, rock e eletrônicas. Entre seus principais feitos, Uematsu é reconhecido por transformar a música de jogos em algo que transcende o ambiente digital, sendo muitas vezes tocada em grandes concertos ao redor do mundo. Sua música, apreciada tanto por fãs de jogos quanto por apreciadores de música em geral, desempenhou um papel crucial em elevar a música de videogames ao status de arte. ", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
+    this.desc5 = new main$.CDesc1.new("   Além de seu trabalho com jogos, ele também formou sua própria banda, The Black Mages, onde explorou versões mais pesadas e eletrificadas de suas composições.", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
+    this.desc6 = new main$.CDesc1.new("   Mais tarde, ele fundou o estúdio Smile Please, onde continuou a trabalhar em projetos pessoais e musicais. Nobuo Uematsu é frequentemente descrito como uma lenda viva da música, e seu impacto continua a influenciar a forma como a música de videogames é percebida e apreciada mundialmente. Seu trabalho tem sido elogiado não apenas por sua habilidade técnica, mas também por seu profundo senso de narrativa emocional, tornando-o um dos mais respeitados compositores contemporâneos.", "Roboto", "Título 1", "Subtítulo 1", 17, 4278190080, 1);
+    this.img1 = new main$.CImg.new("assets/img/Nobuo1.jpg", "", 1);
+    this.img2 = new main$.CImg.new("assets/img/Nobuo2.jpeg", "", 1);
+    this.img3 = new main$.CImg.new("assets/img/Nobuo3.jpg", "", 1);
+    main$._MyHomePageState.__proto__.new.call(this);
+    ;
+  }).prototype = main$._MyHomePageState.prototype;
+  dart.addTypeTests(main$._MyHomePageState);
+  dart.addTypeCaches(main$._MyHomePageState);
+  dart.setMethodSignature(main$._MyHomePageState, () => ({
+    __proto__: dart.getMethods(main$._MyHomePageState.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(main$._MyHomePageState, I[8]);
+  dart.setFieldSignature(main$._MyHomePageState, () => ({
+    __proto__: dart.getFields(main$._MyHomePageState.__proto__),
+    desc1: dart.finalFieldType(main$.CDesc1),
+    desc2: dart.finalFieldType(main$.CDesc1),
+    desc3: dart.finalFieldType(main$.CDesc1),
+    desc4: dart.finalFieldType(main$.CDesc1),
+    desc5: dart.finalFieldType(main$.CDesc1),
+    desc6: dart.finalFieldType(main$.CDesc1),
+    img1: dart.finalFieldType(main$.CImg),
+    img2: dart.finalFieldType(main$.CImg),
+    img3: dart.finalFieldType(main$.CImg)
+  }));
+  main$.main = function main$2() {
+    binding.runApp(C[47] || CT.C47);
+  };
+  var debugLabel$ = dart.privateName(link, "LinkTarget.debugLabel");
+  link.LinkTarget = class LinkTarget extends core.Object {
+    get debugLabel() {
+      return this[debugLabel$];
+    }
+    set debugLabel(value) {
+      super.debugLabel = value;
+    }
+    static ['_#_#tearOff'](opts) {
+      let debugLabel = opts && 'debugLabel' in opts ? opts.debugLabel : null;
+      return new link.LinkTarget.__({debugLabel: debugLabel});
+    }
+  };
+  (link.LinkTarget.__ = function(opts) {
+    let debugLabel = opts && 'debugLabel' in opts ? opts.debugLabel : null;
+    this[debugLabel$] = debugLabel;
+    ;
+  }).prototype = link.LinkTarget.prototype;
+  dart.addTypeTests(link.LinkTarget);
+  dart.addTypeCaches(link.LinkTarget);
+  dart.setLibraryUri(link.LinkTarget, I[9]);
+  dart.setFieldSignature(link.LinkTarget, () => ({
+    __proto__: dart.getFields(link.LinkTarget.__proto__),
+    debugLabel: dart.finalFieldType(core.String)
+  }));
+  dart.setStaticFieldSignature(link.LinkTarget, () => ['defaultTarget', 'self', 'blank']);
+  dart.defineLazy(link.LinkTarget, {
+    /*link.LinkTarget.defaultTarget*/get defaultTarget() {
+      return C[49] || CT.C49;
+    },
+    /*link.LinkTarget.self*/get self() {
+      return C[50] || CT.C50;
+    },
+    /*link.LinkTarget.blank*/get blank() {
+      return C[51] || CT.C51;
+    }
+  }, false);
+  link.LinkInfo = class LinkInfo extends core.Object {};
+  (link.LinkInfo.new = function() {
+    ;
+  }).prototype = link.LinkInfo.prototype;
+  dart.addTypeTests(link.LinkInfo);
+  dart.addTypeCaches(link.LinkInfo);
+  dart.setLibraryUri(link.LinkInfo, I[9]);
+  link.pushRouteNameToFramework = function pushRouteNameToFramework(_, routeName) {
+    let completer = T.CompleterOfByteData().new();
+    system_navigator.SystemNavigator.routeInformationUpdated({location: routeName});
+    ui.channelBuffers.push("flutter/navigation", link._codec.encodeMethodCall(new message_codec.MethodCall.new("pushRouteInformation", new _js_helper.LinkedMap.from(["location", routeName, "state", null]))), T.FutureOrNOfByteDataTovoid().as(dart.bind(completer, 'complete')));
+    return completer.future;
+  };
+  dart.defineLazy(link, {
+    /*link._codec*/get _codec() {
+      return C[52] || CT.C52;
+    }
+  }, false);
+  var link$0 = dart.privateName(link$, "WebLinkDelegate.link");
+  link$.WebLinkDelegate = class WebLinkDelegate extends framework.StatefulWidget {
+    get link() {
+      return this[link$0];
+    }
+    set link(value) {
+      super.link = value;
+    }
+    static ['_#new#tearOff'](link, opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      return new link$.WebLinkDelegate.new(link, {key: key});
+    }
+    createState() {
+      return new link$.WebLinkDelegateState.new();
+    }
+  };
+  (link$.WebLinkDelegate.new = function(link, opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    this[link$0] = link;
+    link$.WebLinkDelegate.__proto__.new.call(this, {key: key});
+    ;
+  }).prototype = link$.WebLinkDelegate.prototype;
+  dart.addTypeTests(link$.WebLinkDelegate);
+  dart.addTypeCaches(link$.WebLinkDelegate);
+  dart.setMethodSignature(link$.WebLinkDelegate, () => ({
+    __proto__: dart.getMethods(link$.WebLinkDelegate.__proto__),
+    createState: dart.fnType(link$.WebLinkDelegateState, [])
+  }));
+  dart.setLibraryUri(link$.WebLinkDelegate, I[10]);
+  dart.setFieldSignature(link$.WebLinkDelegate, () => ({
+    __proto__: dart.getFields(link$.WebLinkDelegate.__proto__),
+    link: dart.finalFieldType(link.LinkInfo)
+  }));
+  var __WebLinkDelegateState__controller = dart.privateName(link$, "_#WebLinkDelegateState#_controller");
+  var _controller = dart.privateName(link$, "_controller");
+  var _followLink = dart.privateName(link$, "_followLink");
+  link$.WebLinkDelegateState = class WebLinkDelegateState extends framework.State$(link$.WebLinkDelegate) {
+    get [_controller]() {
+      let t3;
+      t3 = this[__WebLinkDelegateState__controller];
+      return t3 == null ? dart.throw(new _internal.LateError.fieldNI("_controller")) : t3;
+    }
+    set [_controller](_controller$35param) {
+      this[__WebLinkDelegateState__controller] = _controller$35param;
+    }
+    didUpdateWidget(oldWidget) {
+      link$.WebLinkDelegate.as(oldWidget);
+      super.didUpdateWidget(oldWidget);
+      if (!dart.equals(this.widget.link.uri, oldWidget.link.uri)) {
+        this[_controller].setUri(this.widget.link.uri);
+      }
+      if (!this.widget.link.target[$_equals](oldWidget.link.target)) {
+        this[_controller].setTarget(this.widget.link.target);
+      }
+    }
+    [_followLink]() {
+      link$.LinkViewController.registerHitTest(this[_controller]);
+      return T.FutureOfvoid().value();
+    }
+    build(context) {
+      let t5, t4, t3;
+      return new basic.Stack.new({fit: stack.StackFit.passthrough, children: T.JSArrayOfWidget().of([(t3 = this.widget.link, t4 = context, t5 = this.widget.link.isDisabled ? null : dart.bind(this, _followLink), t3.builder(t4, t5)), new basic.Positioned.fill({child: new platform_view.PlatformViewLink.new({viewType: "__url_launcher::link", onCreatePlatformView: dart.fn(params => {
+                let t3;
+                this[_controller] = link$.LinkViewController.fromParams(params);
+                t3 = this[_controller];
+                return (() => {
+                  t3.setUri(this.widget.link.uri);
+                  t3.setTarget(this.widget.link.target);
+                  return t3;
+                })();
+              }, T.PlatformViewCreationParamsToLinkViewController()), surfaceFactory: dart.fn((context, controller) => new platform_view.PlatformViewSurface.new({controller: controller, gestureRecognizers: C[53] || CT.C53, hitTestBehavior: platform_view$.PlatformViewHitTestBehavior.transparent}), T.BuildContextAndPlatformViewControllerToPlatformViewSurface())})})])});
+    }
+    static ['_#new#tearOff']() {
+      return new link$.WebLinkDelegateState.new();
+    }
+  };
+  (link$.WebLinkDelegateState.new = function() {
+    this[__WebLinkDelegateState__controller] = null;
+    link$.WebLinkDelegateState.__proto__.new.call(this);
+    ;
+  }).prototype = link$.WebLinkDelegateState.prototype;
+  dart.addTypeTests(link$.WebLinkDelegateState);
+  dart.addTypeCaches(link$.WebLinkDelegateState);
+  dart.setMethodSignature(link$.WebLinkDelegateState, () => ({
+    __proto__: dart.getMethods(link$.WebLinkDelegateState.__proto__),
+    [_followLink]: dart.fnType(async.Future$(dart.void), []),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setGetterSignature(link$.WebLinkDelegateState, () => ({
+    __proto__: dart.getGetters(link$.WebLinkDelegateState.__proto__),
+    [_controller]: link$.LinkViewController
+  }));
+  dart.setSetterSignature(link$.WebLinkDelegateState, () => ({
+    __proto__: dart.getSetters(link$.WebLinkDelegateState.__proto__),
+    [_controller]: link$.LinkViewController
+  }));
+  dart.setLibraryUri(link$.WebLinkDelegateState, I[10]);
+  dart.setFieldSignature(link$.WebLinkDelegateState, () => ({
+    __proto__: dart.getFields(link$.WebLinkDelegateState.__proto__),
+    [__WebLinkDelegateState__controller]: dart.fieldType(dart.nullable(link$.LinkViewController))
+  }));
+  var viewId$ = dart.privateName(link$, "LinkViewController.viewId");
+  var __LinkViewController__element = dart.privateName(link$, "_#LinkViewController#_element");
+  var _uri = dart.privateName(link$, "_uri");
+  var _initialize = dart.privateName(link$, "_initialize");
+  var _element = dart.privateName(link$, "_element");
+  var _onDomClick = dart.privateName(link$, "_onDomClick");
+  var _getHtmlTarget = dart.privateName(link$, "_getHtmlTarget");
+  link$.LinkViewController = class LinkViewController extends platform_views.PlatformViewController {
+    get viewId() {
+      return this[viewId$];
+    }
+    set viewId(value) {
+      super.viewId = value;
+    }
+    static ['_#new#tearOff'](viewId) {
+      return new link$.LinkViewController.new(viewId);
+    }
+    static fromParams(params) {
+      let viewId = params.id;
+      let controller = new link$.LinkViewController.new(viewId);
+      controller[_initialize]().then(core.Null, dart.fn(_ => {
+        let t4, t3;
+        if (dart.equals(link$.LinkViewController._instances[$_get](viewId), controller)) {
+          t3 = params;
+          t4 = viewId;
+          t3.onPlatformViewCreated(t4);
+        }
+      }, T.voidToNull()));
+      return controller;
+    }
+    static ['_#fromParams#tearOff'](params) {
+      return link$.LinkViewController.fromParams(params);
+    }
+    static _viewFactory(viewId) {
+      return dart.nullCheck(link$.LinkViewController._instances[$_get](viewId))[_element];
+    }
+    static get _clickSubscription() {
+      let t3;
+      t3 = link$.LinkViewController['_#_clickSubscription'];
+      return t3 == null ? dart.throw(new _internal.LateError.fieldNI("_clickSubscription")) : t3;
+    }
+    static set _clickSubscription(_clickSubscription$35param) {
+      link$.LinkViewController['_#_clickSubscription'] = _clickSubscription$35param;
+    }
+    static _onGlobalClick(event) {
+      let t3;
+      let viewId = link$.getViewIdFromTarget(event);
+      t3 = link$.LinkViewController._instances[$_get](viewId);
+      t3 == null ? null : t3[_onDomClick](event);
+      link$.LinkViewController.unregisterHitTest();
+    }
+    static registerHitTest(controller) {
+      link$.LinkViewController._hitTestedViewId = controller.viewId;
+    }
+    static unregisterHitTest() {
+      link$.LinkViewController._hitTestedViewId = null;
+    }
+    get [_element]() {
+      let t3;
+      t3 = this[__LinkViewController__element];
+      return t3 == null ? dart.throw(new _internal.LateError.fieldNI("_element")) : t3;
+    }
+    set [_element](_element$35param) {
+      this[__LinkViewController__element] = _element$35param;
+    }
+    [_initialize]() {
+      return async.async(dart.void, (function* _initialize() {
+        let t3;
+        this[_element] = html.Element.tag("a");
+        js_util._setPropertyUnchecked(core.int, this[_element], "__url_launcher::link::viewId", this.viewId);
+        t3 = this[_element][$style];
+        (() => {
+          t3[$opacity] = "0";
+          t3[$display] = "block";
+          t3[$width] = "100%";
+          t3[$height] = "100%";
+          t3[$cursor] = "unset";
+          return t3;
+        })();
+        this[_element][$setAttribute]("rel", "noreferrer noopener");
+        let args = new (T.IdentityMapOfString$dynamic()).from(["id", this.viewId, "viewType", "__url_launcher::link"]);
+        yield system_channels.SystemChannels.platform_views.invokeMethod(dart.void, "create", args);
+      }).bind(this));
+    }
+    [_onDomClick](event) {
+      let isHitTested = link$.LinkViewController._hitTestedViewId === this.viewId;
+      if (!isHitTested) {
+        event.preventDefault();
+        return;
+      }
+      if (this[_uri] != null && dart.nullCheck(this[_uri]).hasScheme) {
+        return;
+      }
+      event.preventDefault();
+      let routeName = dart.toString(this[_uri]);
+      link.pushRouteNameToFramework(null, routeName);
+    }
+    setUri(uri) {
+      let t3, t3$;
+      this[_uri] = uri;
+      if (uri == null) {
+        this[_element][$removeAttribute]("href");
+      } else {
+        let href = dart.toString(uri);
+        if (!uri.hasScheme) {
+          href = (t3$ = (t3 = url_strategy.urlStrategy, t3 == null ? null : t3.prepareExternalUrl(href)), t3$ == null ? href : t3$);
+        }
+        this[_element][$setAttribute]("href", href);
+      }
+    }
+    setTarget(target) {
+      this[_element][$setAttribute]("target", this[_getHtmlTarget](target));
+    }
+    [_getHtmlTarget](target) {
+      switch (target) {
+        case C[49] || CT.C49:
+        case C[50] || CT.C50:
+          {
+            return "_self";
+          }
+        case C[51] || CT.C51:
+          {
+            return "_blank";
+          }
+      }
+      return "_self";
+    }
+    clearFocus() {
+      return async.async(dart.void, function* clearFocus() {
+      });
+    }
+    dispatchPointerEvent(event) {
+      return async.async(dart.void, function* dispatchPointerEvent() {
+      });
+    }
+    dispose() {
+      return async.async(dart.void, (function* dispose() {
+        if (!dart.equals(link$.LinkViewController._instances[$_get](this.viewId), this)) dart.assertFailed(null, I[11], 269, 12, "_instances[viewId] == this");
+        link$.LinkViewController._instances[$remove](this.viewId);
+        if (link$.LinkViewController._instances[$isEmpty]) {
+          yield link$.LinkViewController._clickSubscription.cancel();
+        }
+        yield system_channels.SystemChannels.platform_views.invokeMethod(dart.void, "dispose", this.viewId);
+      }).bind(this));
+    }
+  };
+  (link$.LinkViewController.new = function(viewId) {
+    this[__LinkViewController__element] = null;
+    this[_uri] = null;
+    this[viewId$] = viewId;
+    if (link$.LinkViewController._instances[$isEmpty]) {
+      link$.LinkViewController._clickSubscription = html.window[$onClick].listen(C[54] || CT.C54);
+    }
+    link$.LinkViewController._instances[$_set](this.viewId, this);
+  }).prototype = link$.LinkViewController.prototype;
+  dart.addTypeTests(link$.LinkViewController);
+  dart.addTypeCaches(link$.LinkViewController);
+  dart.setMethodSignature(link$.LinkViewController, () => ({
+    __proto__: dart.getMethods(link$.LinkViewController.__proto__),
+    [_initialize]: dart.fnType(async.Future$(dart.void), []),
+    [_onDomClick]: dart.fnType(dart.void, [html.MouseEvent]),
+    setUri: dart.fnType(dart.void, [dart.nullable(core.Uri)]),
+    setTarget: dart.fnType(dart.void, [link.LinkTarget]),
+    [_getHtmlTarget]: dart.fnType(core.String, [link.LinkTarget]),
+    clearFocus: dart.fnType(async.Future$(dart.void), []),
+    dispatchPointerEvent: dart.fnType(async.Future$(dart.void), [events.PointerEvent]),
+    dispose: dart.fnType(async.Future$(dart.void), [])
+  }));
+  dart.setStaticMethodSignature(link$.LinkViewController, () => ['fromParams', '_viewFactory', '_onGlobalClick', 'registerHitTest', 'unregisterHitTest']);
+  dart.setGetterSignature(link$.LinkViewController, () => ({
+    __proto__: dart.getGetters(link$.LinkViewController.__proto__),
+    [_element]: html.Element
+  }));
+  dart.setSetterSignature(link$.LinkViewController, () => ({
+    __proto__: dart.getSetters(link$.LinkViewController.__proto__),
+    [_element]: html.Element
+  }));
+  dart.setStaticGetterSignature(link$.LinkViewController, () => ['_clickSubscription']);
+  dart.setStaticSetterSignature(link$.LinkViewController, () => ['_clickSubscription']);
+  dart.setLibraryUri(link$.LinkViewController, I[10]);
+  dart.setFieldSignature(link$.LinkViewController, () => ({
+    __proto__: dart.getFields(link$.LinkViewController.__proto__),
+    viewId: dart.finalFieldType(core.int),
+    [__LinkViewController__element]: dart.fieldType(dart.nullable(html.Element)),
+    [_uri]: dart.fieldType(dart.nullable(core.Uri))
+  }));
+  dart.setStaticFieldSignature(link$.LinkViewController, () => ['_instances', '_hitTestedViewId', '_#_clickSubscription']);
+  dart.defineLazy(link$.LinkViewController, {
+    /*link$.LinkViewController._instances*/get _instances() {
+      return new (T.IdentityMapOfint$LinkViewController()).new();
+    },
+    /*link$.LinkViewController._hitTestedViewId*/get _hitTestedViewId() {
+      return null;
+    },
+    set _hitTestedViewId(value) {},
+    /*link$.LinkViewController['_#_clickSubscription']*/get ['_#_clickSubscription']() {
+      return null;
+    },
+    set ['_#_clickSubscription'](value) {}
+  }, false);
+  link$.getViewIdFromTarget = function getViewIdFromTarget(event) {
+    let linkElement = link$.getLinkElementFromTarget(event);
+    if (linkElement != null) {
+      return js_util.getProperty(T.intN(), linkElement, "__url_launcher::link::viewId");
+    }
+    return null;
+  };
+  link$.getLinkElementFromTarget = function getLinkElementFromTarget(event) {
+    let target = event[$target];
+    if (target != null && html.Element.is(target)) {
+      if (link$.isLinkElement(target)) {
+        return target;
+      }
+      if (target[$shadowRoot] != null) {
+        let child = dart.nullCheck(target[$shadowRoot]).lastChild;
+        if (child != null && html.Element.is(child) && link$.isLinkElement(child)) {
+          return child;
+        }
+      }
+    }
+    return null;
+  };
+  link$.isLinkElement = function isLinkElement(element) {
+    return element != null && element[$tagName] === "A" && js_util.hasProperty(element, "__url_launcher::link::viewId");
+  };
+  dart.copyProperties(link$, {
+    get linkViewFactory() {
+      return C[55] || CT.C55;
+    }
+  });
+  dart.defineLazy(link$, {
+    /*link$.linkViewType*/get linkViewType() {
+      return "__url_launcher::link";
+    },
+    /*link$.linkViewIdProperty*/get linkViewIdProperty() {
+      return "__url_launcher::link::viewId";
+    }
+  }, false);
+  legacy_api.launch = function launch(urlString, opts) {
+    let forceSafariVC = opts && 'forceSafariVC' in opts ? opts.forceSafariVC : null;
+    let forceWebView = opts && 'forceWebView' in opts ? opts.forceWebView : false;
+    let enableJavaScript = opts && 'enableJavaScript' in opts ? opts.enableJavaScript : false;
+    let enableDomStorage = opts && 'enableDomStorage' in opts ? opts.enableDomStorage : false;
+    let universalLinksOnly = opts && 'universalLinksOnly' in opts ? opts.universalLinksOnly : false;
+    let headers = opts && 'headers' in opts ? opts.headers : C[43] || CT.C43;
+    let statusBarBrightness = opts && 'statusBarBrightness' in opts ? opts.statusBarBrightness : null;
+    let webOnlyWindowName = opts && 'webOnlyWindowName' in opts ? opts.webOnlyWindowName : null;
+    return async.async(core.bool, function* launch() {
+      let t3, t3$;
+      let url = core.Uri.tryParse(urlString[$trimLeft]());
+      let isWebURL = url != null && (url.scheme === "http" || url.scheme === "https");
+      if (dart.test((t3 = forceSafariVC, t3 == null ? false || forceWebView : t3)) && !isWebURL) {
+        dart.throw(new message_codec.PlatformException.new({code: "NOT_A_WEB_SCHEME", message: "To use webview or safariVC, you need to pass " + "in a web URL. This " + urlString + " is not a web URL."}));
+      }
+      let previousAutomaticSystemUiAdjustment = true;
+      if (statusBarBrightness != null && platform.defaultTargetPlatform === platform.TargetPlatform.iOS && legacy_api._ambiguate(binding.WidgetsBinding, binding.WidgetsBinding.instance) != null) {
+        previousAutomaticSystemUiAdjustment = dart.nullCheck(legacy_api._ambiguate(binding.WidgetsBinding, binding.WidgetsBinding.instance)).renderView.automaticSystemUiAdjustment;
+        dart.nullCheck(legacy_api._ambiguate(binding.WidgetsBinding, binding.WidgetsBinding.instance)).renderView.automaticSystemUiAdjustment = false;
+        system_chrome.SystemChrome.setSystemUIOverlayStyle(statusBarBrightness === ui.Brightness.light ? system_chrome.SystemUiOverlayStyle.dark : system_chrome.SystemUiOverlayStyle.light);
+      }
+      let result = (yield url_launcher_platform.UrlLauncherPlatform.instance.launch(urlString, {useSafariVC: (t3$ = forceSafariVC, t3$ == null ? isWebURL : t3$), useWebView: forceWebView, enableJavaScript: enableJavaScript, enableDomStorage: enableDomStorage, universalLinksOnly: universalLinksOnly, headers: headers, webOnlyWindowName: webOnlyWindowName}));
+      if (statusBarBrightness != null && legacy_api._ambiguate(binding.WidgetsBinding, binding.WidgetsBinding.instance) != null) {
+        dart.nullCheck(legacy_api._ambiguate(binding.WidgetsBinding, binding.WidgetsBinding.instance)).renderView.automaticSystemUiAdjustment = previousAutomaticSystemUiAdjustment;
+      }
+      return result;
+    });
+  };
+  legacy_api.canLaunch = function canLaunch(urlString) {
+    return async.async(core.bool, function* canLaunch() {
+      return url_launcher_platform.UrlLauncherPlatform.instance.canLaunch(urlString);
+    });
+  };
+  legacy_api.closeWebView = function closeWebView() {
+    return async.async(dart.void, function* closeWebView() {
+      return url_launcher_platform.UrlLauncherPlatform.instance.closeWebView();
+    });
+  };
+  legacy_api._ambiguate = function _ambiguate(T, value) {
+    return value;
+  };
+  var _name = dart.privateName(core, "_name");
+  var _enumToString = dart.privateName(core, "_enumToString");
+  types.LaunchMode = class LaunchMode extends core._Enum {
+    [_enumToString]() {
+      return "LaunchMode." + this[_name];
+    }
+  };
+  (types.LaunchMode.new = function(index, name) {
+    types.LaunchMode.__proto__.new.call(this, index, name);
+    ;
+  }).prototype = types.LaunchMode.prototype;
+  dart.addTypeTests(types.LaunchMode);
+  dart.addTypeCaches(types.LaunchMode);
+  dart.setMethodSignature(types.LaunchMode, () => ({
+    __proto__: dart.getMethods(types.LaunchMode.__proto__),
+    [_enumToString]: dart.fnType(core.String, [])
+  }));
+  dart.setLibraryUri(types.LaunchMode, I[12]);
+  dart.setStaticFieldSignature(types.LaunchMode, () => ['values', 'platformDefault', 'inAppWebView', 'externalApplication', 'externalNonBrowserApplication']);
+  dart.defineLazy(types.LaunchMode, {
+    /*types.LaunchMode.values*/get values() {
+      return C[56] || CT.C56;
+    },
+    /*types.LaunchMode.platformDefault*/get platformDefault() {
+      return C[57] || CT.C57;
+    },
+    /*types.LaunchMode.inAppWebView*/get inAppWebView() {
+      return C[58] || CT.C58;
+    },
+    /*types.LaunchMode.externalApplication*/get externalApplication() {
+      return C[59] || CT.C59;
+    },
+    /*types.LaunchMode.externalNonBrowserApplication*/get externalNonBrowserApplication() {
+      return C[60] || CT.C60;
+    }
+  }, false);
+  var enableJavaScript$ = dart.privateName(types, "WebViewConfiguration.enableJavaScript");
+  var enableDomStorage$ = dart.privateName(types, "WebViewConfiguration.enableDomStorage");
+  var headers$ = dart.privateName(types, "WebViewConfiguration.headers");
+  types.WebViewConfiguration = class WebViewConfiguration extends core.Object {
+    get enableJavaScript() {
+      return this[enableJavaScript$];
+    }
+    set enableJavaScript(value) {
+      super.enableJavaScript = value;
+    }
+    get enableDomStorage() {
+      return this[enableDomStorage$];
+    }
+    set enableDomStorage(value) {
+      super.enableDomStorage = value;
+    }
+    get headers() {
+      return this[headers$];
+    }
+    set headers(value) {
+      super.headers = value;
+    }
+    static ['_#new#tearOff'](opts) {
+      let enableJavaScript = opts && 'enableJavaScript' in opts ? opts.enableJavaScript : true;
+      let enableDomStorage = opts && 'enableDomStorage' in opts ? opts.enableDomStorage : true;
+      let headers = opts && 'headers' in opts ? opts.headers : C[43] || CT.C43;
+      return new types.WebViewConfiguration.new({enableJavaScript: enableJavaScript, enableDomStorage: enableDomStorage, headers: headers});
+    }
+  };
+  (types.WebViewConfiguration.new = function(opts) {
+    let enableJavaScript = opts && 'enableJavaScript' in opts ? opts.enableJavaScript : true;
+    let enableDomStorage = opts && 'enableDomStorage' in opts ? opts.enableDomStorage : true;
+    let headers = opts && 'headers' in opts ? opts.headers : C[43] || CT.C43;
+    this[enableJavaScript$] = enableJavaScript;
+    this[enableDomStorage$] = enableDomStorage;
+    this[headers$] = headers;
+    ;
+  }).prototype = types.WebViewConfiguration.prototype;
+  dart.addTypeTests(types.WebViewConfiguration);
+  dart.addTypeCaches(types.WebViewConfiguration);
+  dart.setLibraryUri(types.WebViewConfiguration, I[12]);
+  dart.setFieldSignature(types.WebViewConfiguration, () => ({
+    __proto__: dart.getFields(types.WebViewConfiguration.__proto__),
+    enableJavaScript: dart.finalFieldType(core.bool),
+    enableDomStorage: dart.finalFieldType(core.bool),
+    headers: dart.finalFieldType(core.Map$(core.String, core.String))
+  }));
+  url_launcher_uri.launchUrl = function launchUrl(url, opts) {
+    let mode = opts && 'mode' in opts ? opts.mode : C[57] || CT.C57;
+    let webViewConfiguration = opts && 'webViewConfiguration' in opts ? opts.webViewConfiguration : C[61] || CT.C61;
+    let webOnlyWindowName = opts && 'webOnlyWindowName' in opts ? opts.webOnlyWindowName : null;
+    return async.async(core.bool, function* launchUrl() {
+      if (mode === types.LaunchMode.inAppWebView && !(url.scheme === "https" || url.scheme === "http")) {
+        dart.throw(new core.ArgumentError.value(url, "url", "To use an in-app web view, you must provide an http(s) URL."));
+      }
+      return url_launcher_platform.UrlLauncherPlatform.instance.launchUrl(url.toString(), new types$.LaunchOptions.new({mode: type_conversion.convertLaunchMode(mode), webViewConfiguration: type_conversion.convertConfiguration(webViewConfiguration), webOnlyWindowName: webOnlyWindowName}));
+    });
+  };
+  url_launcher_uri.canLaunchUrl = function canLaunchUrl(url) {
+    return async.async(core.bool, function* canLaunchUrl() {
+      return url_launcher_platform.UrlLauncherPlatform.instance.canLaunch(url.toString());
+    });
+  };
+  url_launcher_uri.closeInAppWebView = function closeInAppWebView() {
+    return async.async(dart.void, function* closeInAppWebView() {
+      return url_launcher_platform.UrlLauncherPlatform.instance.closeWebView();
+    });
+  };
+  types$.PreferredLaunchMode = class PreferredLaunchMode extends core._Enum {
+    [_enumToString]() {
+      return "PreferredLaunchMode." + this[_name];
+    }
+  };
+  (types$.PreferredLaunchMode.new = function(index, name) {
+    types$.PreferredLaunchMode.__proto__.new.call(this, index, name);
+    ;
+  }).prototype = types$.PreferredLaunchMode.prototype;
+  dart.addTypeTests(types$.PreferredLaunchMode);
+  dart.addTypeCaches(types$.PreferredLaunchMode);
+  dart.setMethodSignature(types$.PreferredLaunchMode, () => ({
+    __proto__: dart.getMethods(types$.PreferredLaunchMode.__proto__),
+    [_enumToString]: dart.fnType(core.String, [])
+  }));
+  dart.setLibraryUri(types$.PreferredLaunchMode, I[13]);
+  dart.setStaticFieldSignature(types$.PreferredLaunchMode, () => ['values', 'platformDefault', 'inAppWebView', 'inAppBrowserView', 'externalApplication', 'externalNonBrowserApplication']);
+  dart.defineLazy(types$.PreferredLaunchMode, {
+    /*types$.PreferredLaunchMode.values*/get values() {
+      return C[62] || CT.C62;
+    },
+    /*types$.PreferredLaunchMode.platformDefault*/get platformDefault() {
+      return C[63] || CT.C63;
+    },
+    /*types$.PreferredLaunchMode.inAppWebView*/get inAppWebView() {
+      return C[64] || CT.C64;
+    },
+    /*types$.PreferredLaunchMode.inAppBrowserView*/get inAppBrowserView() {
+      return C[65] || CT.C65;
+    },
+    /*types$.PreferredLaunchMode.externalApplication*/get externalApplication() {
+      return C[66] || CT.C66;
+    },
+    /*types$.PreferredLaunchMode.externalNonBrowserApplication*/get externalNonBrowserApplication() {
+      return C[67] || CT.C67;
+    }
+  }, false);
+  var enableJavaScript$0 = dart.privateName(types$, "InAppWebViewConfiguration.enableJavaScript");
+  var enableDomStorage$0 = dart.privateName(types$, "InAppWebViewConfiguration.enableDomStorage");
+  var headers$0 = dart.privateName(types$, "InAppWebViewConfiguration.headers");
+  types$.InAppWebViewConfiguration = class InAppWebViewConfiguration extends core.Object {
+    get enableJavaScript() {
+      return this[enableJavaScript$0];
+    }
+    set enableJavaScript(value) {
+      super.enableJavaScript = value;
+    }
+    get enableDomStorage() {
+      return this[enableDomStorage$0];
+    }
+    set enableDomStorage(value) {
+      super.enableDomStorage = value;
+    }
+    get headers() {
+      return this[headers$0];
+    }
+    set headers(value) {
+      super.headers = value;
+    }
+    static ['_#new#tearOff'](opts) {
+      let enableJavaScript = opts && 'enableJavaScript' in opts ? opts.enableJavaScript : true;
+      let enableDomStorage = opts && 'enableDomStorage' in opts ? opts.enableDomStorage : true;
+      let headers = opts && 'headers' in opts ? opts.headers : C[43] || CT.C43;
+      return new types$.InAppWebViewConfiguration.new({enableJavaScript: enableJavaScript, enableDomStorage: enableDomStorage, headers: headers});
+    }
+  };
+  (types$.InAppWebViewConfiguration.new = function(opts) {
+    let enableJavaScript = opts && 'enableJavaScript' in opts ? opts.enableJavaScript : true;
+    let enableDomStorage = opts && 'enableDomStorage' in opts ? opts.enableDomStorage : true;
+    let headers = opts && 'headers' in opts ? opts.headers : C[43] || CT.C43;
+    this[enableJavaScript$0] = enableJavaScript;
+    this[enableDomStorage$0] = enableDomStorage;
+    this[headers$0] = headers;
+    ;
+  }).prototype = types$.InAppWebViewConfiguration.prototype;
+  dart.addTypeTests(types$.InAppWebViewConfiguration);
+  dart.addTypeCaches(types$.InAppWebViewConfiguration);
+  dart.setLibraryUri(types$.InAppWebViewConfiguration, I[13]);
+  dart.setFieldSignature(types$.InAppWebViewConfiguration, () => ({
+    __proto__: dart.getFields(types$.InAppWebViewConfiguration.__proto__),
+    enableJavaScript: dart.finalFieldType(core.bool),
+    enableDomStorage: dart.finalFieldType(core.bool),
+    headers: dart.finalFieldType(core.Map$(core.String, core.String))
+  }));
+  var mode$ = dart.privateName(types$, "LaunchOptions.mode");
+  var webViewConfiguration$ = dart.privateName(types$, "LaunchOptions.webViewConfiguration");
+  var webOnlyWindowName$ = dart.privateName(types$, "LaunchOptions.webOnlyWindowName");
+  types$.LaunchOptions = class LaunchOptions extends core.Object {
+    get mode() {
+      return this[mode$];
+    }
+    set mode(value) {
+      super.mode = value;
+    }
+    get webViewConfiguration() {
+      return this[webViewConfiguration$];
+    }
+    set webViewConfiguration(value) {
+      super.webViewConfiguration = value;
+    }
+    get webOnlyWindowName() {
+      return this[webOnlyWindowName$];
+    }
+    set webOnlyWindowName(value) {
+      super.webOnlyWindowName = value;
+    }
+    static ['_#new#tearOff'](opts) {
+      let mode = opts && 'mode' in opts ? opts.mode : C[63] || CT.C63;
+      let webViewConfiguration = opts && 'webViewConfiguration' in opts ? opts.webViewConfiguration : C[68] || CT.C68;
+      let webOnlyWindowName = opts && 'webOnlyWindowName' in opts ? opts.webOnlyWindowName : null;
+      return new types$.LaunchOptions.new({mode: mode, webViewConfiguration: webViewConfiguration, webOnlyWindowName: webOnlyWindowName});
+    }
+  };
+  (types$.LaunchOptions.new = function(opts) {
+    let mode = opts && 'mode' in opts ? opts.mode : C[63] || CT.C63;
+    let webViewConfiguration = opts && 'webViewConfiguration' in opts ? opts.webViewConfiguration : C[68] || CT.C68;
+    let webOnlyWindowName = opts && 'webOnlyWindowName' in opts ? opts.webOnlyWindowName : null;
+    this[mode$] = mode;
+    this[webViewConfiguration$] = webViewConfiguration;
+    this[webOnlyWindowName$] = webOnlyWindowName;
+    ;
+  }).prototype = types$.LaunchOptions.prototype;
+  dart.addTypeTests(types$.LaunchOptions);
+  dart.addTypeCaches(types$.LaunchOptions);
+  dart.setLibraryUri(types$.LaunchOptions, I[13]);
+  dart.setFieldSignature(types$.LaunchOptions, () => ({
+    __proto__: dart.getFields(types$.LaunchOptions.__proto__),
+    mode: dart.finalFieldType(types$.PreferredLaunchMode),
+    webViewConfiguration: dart.finalFieldType(types$.InAppWebViewConfiguration),
+    webOnlyWindowName: dart.finalFieldType(dart.nullable(core.String))
+  }));
+  type_conversion.convertConfiguration = function convertConfiguration(config) {
+    return new types$.InAppWebViewConfiguration.new({enableJavaScript: config.enableJavaScript, enableDomStorage: config.enableDomStorage, headers: config.headers});
+  };
+  type_conversion.convertLaunchMode = function convertLaunchMode(mode) {
+    switch (mode) {
+      case C[57] || CT.C57:
+        {
+          return types$.PreferredLaunchMode.platformDefault;
+        }
+      case C[58] || CT.C58:
+        {
+          return types$.PreferredLaunchMode.inAppWebView;
+        }
+      case C[59] || CT.C59:
+        {
+          return types$.PreferredLaunchMode.externalApplication;
+        }
+      case C[60] || CT.C60:
+        {
+          return types$.PreferredLaunchMode.externalNonBrowserApplication;
+        }
+    }
+  };
+  plugin_platform_interface.MockPlatformInterfaceMixin = class MockPlatformInterfaceMixin extends core.Object {};
+  (plugin_platform_interface.MockPlatformInterfaceMixin.new = function() {
+    ;
+  }).prototype = plugin_platform_interface.MockPlatformInterfaceMixin.prototype;
+  dart.addTypeTests(plugin_platform_interface.MockPlatformInterfaceMixin);
+  dart.addTypeCaches(plugin_platform_interface.MockPlatformInterfaceMixin);
+  plugin_platform_interface.MockPlatformInterfaceMixin[dart.implements] = () => [plugin_platform_interface.PlatformInterface];
+  dart.setLibraryUri(plugin_platform_interface.MockPlatformInterfaceMixin, I[5]);
+  var linkDelegate = dart.privateName(method_channel_url_launcher, "MethodChannelUrlLauncher.linkDelegate");
+  method_channel_url_launcher.MethodChannelUrlLauncher = class MethodChannelUrlLauncher extends url_launcher_platform.UrlLauncherPlatform {
+    get linkDelegate() {
+      return this[linkDelegate];
+    }
+    set linkDelegate(value) {
+      super.linkDelegate = value;
+    }
+    canLaunch(url) {
+      return method_channel_url_launcher._channel.invokeMethod(core.bool, "canLaunch", new (T.IdentityMapOfString$Object()).from(["url", url])).then(core.bool, dart.fn(value => {
+        let t7;
+        t7 = value;
+        return t7 == null ? false : t7;
+      }, T.boolNTobool()));
+    }
+    closeWebView() {
+      return method_channel_url_launcher._channel.invokeMethod(dart.void, "closeWebView");
+    }
+    launch(url, opts) {
+      let useSafariVC = opts && 'useSafariVC' in opts ? opts.useSafariVC : null;
+      let useWebView = opts && 'useWebView' in opts ? opts.useWebView : null;
+      let enableJavaScript = opts && 'enableJavaScript' in opts ? opts.enableJavaScript : null;
+      let enableDomStorage = opts && 'enableDomStorage' in opts ? opts.enableDomStorage : null;
+      let universalLinksOnly = opts && 'universalLinksOnly' in opts ? opts.universalLinksOnly : null;
+      let headers = opts && 'headers' in opts ? opts.headers : null;
+      let webOnlyWindowName = opts && 'webOnlyWindowName' in opts ? opts.webOnlyWindowName : null;
+      return method_channel_url_launcher._channel.invokeMethod(core.bool, "launch", new (T.IdentityMapOfString$Object()).from(["url", url, "useSafariVC", useSafariVC, "useWebView", useWebView, "enableJavaScript", enableJavaScript, "enableDomStorage", enableDomStorage, "universalLinksOnly", universalLinksOnly, "headers", headers])).then(core.bool, dart.fn(value => {
+        let t7;
+        t7 = value;
+        return t7 == null ? false : t7;
+      }, T.boolNTobool()));
+    }
+    static ['_#new#tearOff']() {
+      return new method_channel_url_launcher.MethodChannelUrlLauncher.new();
+    }
+  };
+  (method_channel_url_launcher.MethodChannelUrlLauncher.new = function() {
+    this[linkDelegate] = null;
+    method_channel_url_launcher.MethodChannelUrlLauncher.__proto__.new.call(this);
+    ;
+  }).prototype = method_channel_url_launcher.MethodChannelUrlLauncher.prototype;
+  dart.addTypeTests(method_channel_url_launcher.MethodChannelUrlLauncher);
+  dart.addTypeCaches(method_channel_url_launcher.MethodChannelUrlLauncher);
+  dart.setLibraryUri(method_channel_url_launcher.MethodChannelUrlLauncher, I[14]);
+  dart.setFieldSignature(method_channel_url_launcher.MethodChannelUrlLauncher, () => ({
+    __proto__: dart.getFields(method_channel_url_launcher.MethodChannelUrlLauncher.__proto__),
+    linkDelegate: dart.finalFieldType(dart.nullable(dart.fnType(framework.Widget, [link.LinkInfo])))
+  }));
+  var MethodChannel__binaryMessenger = dart.privateName(platform_channel, "MethodChannel._binaryMessenger");
+  var StandardMethodCodec_messageCodec = dart.privateName(message_codecs, "StandardMethodCodec.messageCodec");
+  var MethodChannel_codec = dart.privateName(platform_channel, "MethodChannel.codec");
+  var MethodChannel_name = dart.privateName(platform_channel, "MethodChannel.name");
+  dart.defineLazy(method_channel_url_launcher, {
+    /*method_channel_url_launcher._channel*/get _channel() {
+      return C[69] || CT.C69;
+    }
+  }, false);
+  url_launcher_string$.launchUrlString = function launchUrlString(urlString, opts) {
+    let mode = opts && 'mode' in opts ? opts.mode : C[57] || CT.C57;
+    let webViewConfiguration = opts && 'webViewConfiguration' in opts ? opts.webViewConfiguration : C[61] || CT.C61;
+    let webOnlyWindowName = opts && 'webOnlyWindowName' in opts ? opts.webOnlyWindowName : null;
+    return async.async(core.bool, function* launchUrlString() {
+      if (mode === types.LaunchMode.inAppWebView && !(urlString[$startsWith]("https:") || urlString[$startsWith]("http:"))) {
+        dart.throw(new core.ArgumentError.value(urlString, "urlString", "To use an in-app web view, you must provide an http(s) URL."));
+      }
+      return url_launcher_platform.UrlLauncherPlatform.instance.launchUrl(urlString, new types$.LaunchOptions.new({mode: type_conversion.convertLaunchMode(mode), webViewConfiguration: type_conversion.convertConfiguration(webViewConfiguration), webOnlyWindowName: webOnlyWindowName}));
+    });
+  };
+  url_launcher_string$.canLaunchUrlString = function canLaunchUrlString(urlString) {
+    return async.async(core.bool, function* canLaunchUrlString() {
+      return url_launcher_platform.UrlLauncherPlatform.instance.canLaunch(urlString);
+    });
+  };
   dart.trackLibraries("zapp_user_main", {
     "file:///zapp/project/.zapp_entry.dart": $46zapp_entry,
     "file:///zapp/project/lib/main.dart": main,
     "file:///zapp/project/.dart_tool/dartpad/web_plugin_registrant.dart": web_plugin_registrant,
     "package:flutter_app/MusicasPag.dart": MusicasPag,
     "package:flutter_app/ArtistaPag.dart": ArtistaPag,
-    "package:flutter_app/TrabalhosPag.dart": TrabalhosPag
+    "package:flutter_app/TrabalhosPag.dart": TrabalhosPag,
+    "package:url_launcher_web/url_launcher_web.dart": url_launcher_web,
+    "package:url_launcher/url_launcher.dart": url_launcher,
+    "package:flutter_app/main.dart": main$,
+    "package:url_launcher_platform_interface/link.dart": link,
+    "package:url_launcher_platform_interface/url_launcher_platform_interface.dart": url_launcher_platform_interface,
+    "package:url_launcher_web/src/link.dart": link$,
+    "package:url_launcher_web/src/shims/dart_ui.dart": dart_ui,
+    "package:url_launcher/src/legacy_api.dart": legacy_api,
+    "package:url_launcher/src/types.dart": types,
+    "package:url_launcher/src/url_launcher_uri.dart": url_launcher_uri,
+    "package:url_launcher_platform_interface/src/types.dart": types$,
+    "package:url_launcher_platform_interface/src/url_launcher_platform.dart": url_launcher_platform,
+    "package:url_launcher_web/src/shims/dart_ui_real.dart": dart_ui_real,
+    "package:url_launcher/url_launcher_string.dart": url_launcher_string,
+    "package:url_launcher/src/type_conversion.dart": type_conversion,
+    "package:plugin_platform_interface/plugin_platform_interface.dart": plugin_platform_interface,
+    "package:url_launcher_platform_interface/method_channel_url_launcher.dart": method_channel_url_launcher,
+    "package:url_launcher/src/url_launcher_string.dart": url_launcher_string$
   }, {
-  }, '{"version":3,"sourceRoot":"","sources":["/zapp/project/.zapp_entry.dart","/zapp/project/lib/main.dart","/zapp/project/.dart_tool/dartpad/web_plugin_registrant.dart","/zapp/project/lib/MusicasPag.dart","/zapp/project/lib/ArtistaPag.dart","/zapp/project/lib/TrabalhosPag.dart"],"names":[],"mappings":"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","file":"main.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["/zapp/project/.zapp_entry.dart","/zapp/project/lib/main.dart","/zapp/project/.dart_tool/dartpad/web_plugin_registrant.dart","/zapp/project/lib/MusicasPag.dart","/zapp/project/lib/ArtistaPag.dart","/zapp/project/lib/TrabalhosPag.dart","/zapp/pub/.pub_cache/hosted/pub.dev/plugin_platform_interface-2.1.6/lib/plugin_platform_interface.dart","/zapp/pub/.pub_cache/hosted/pub.dev/url_launcher_platform_interface-2.2.0/lib/src/url_launcher_platform.dart","/zapp/pub/.pub_cache/hosted/pub.dev/url_launcher_web-2.0.19/lib/url_launcher_web.dart","/zapp/pub/.pub_cache/hosted/pub.dev/url_launcher_platform_interface-2.2.0/lib/link.dart","/zapp/pub/.pub_cache/hosted/pub.dev/url_launcher_web-2.0.19/lib/src/link.dart","/zapp/pub/.pub_cache/hosted/pub.dev/url_launcher-6.1.11/lib/src/legacy_api.dart","/zapp/pub/.pub_cache/hosted/pub.dev/url_launcher-6.1.11/lib/src/types.dart","/zapp/pub/.pub_cache/hosted/pub.dev/url_launcher-6.1.11/lib/src/url_launcher_uri.dart","/zapp/pub/.pub_cache/hosted/pub.dev/url_launcher_platform_interface-2.2.0/lib/src/types.dart","/zapp/pub/.pub_cache/hosted/pub.dev/url_launcher-6.1.11/lib/src/type_conversion.dart","/zapp/pub/.pub_cache/hosted/pub.dev/url_launcher_platform_interface-2.2.0/lib/method_channel_url_launcher.dart","/zapp/pub/.pub_cache/hosted/pub.dev/url_launcher-6.1.11/lib/src/url_launcher_string.dart"],"names":[],"mappings":"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","file":"main.js"}');
   // Exports:
   return {
     zapp__project__$46zapp_entry: $46zapp_entry,
@@ -904,7 +2885,25 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     zapp__project__$46dart_tool__dartpad__web_plugin_registrant: web_plugin_registrant,
     MusicasPag: MusicasPag,
     ArtistaPag: ArtistaPag,
-    TrabalhosPag: TrabalhosPag
+    TrabalhosPag: TrabalhosPag,
+    url_launcher_web: url_launcher_web,
+    url_launcher: url_launcher,
+    main: main$,
+    link: link,
+    url_launcher_platform_interface: url_launcher_platform_interface,
+    src__link: link$,
+    src__shims__dart_ui: dart_ui,
+    src__legacy_api: legacy_api,
+    src__types: types,
+    src__url_launcher_uri: url_launcher_uri,
+    src__types: types$,
+    src__url_launcher_platform: url_launcher_platform,
+    src__shims__dart_ui_real: dart_ui_real,
+    url_launcher_string: url_launcher_string,
+    src__type_conversion: type_conversion,
+    plugin_platform_interface: plugin_platform_interface,
+    method_channel_url_launcher: method_channel_url_launcher,
+    src__url_launcher_string: url_launcher_string$
   };
 }));
 
