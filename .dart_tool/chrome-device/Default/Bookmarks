@@ -1,0 +1,186 @@
+{
+   "checksum": "97afc527cea67f117fedf401bd697245",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13339180679898064",
+               "date_last_used": "0",
+               "guid": "7e68568d-e4ac-49f4-a55f-f65947e008ec",
+               "id": "16",
+               "name": "Dell",
+               "show_icon": false,
+               "source": "import_fre",
+               "type": "url",
+               "url": "http://www1.la.dell.com/content/default.aspx?c=br&l=pt&s=gen",
+               "visit_count": 0
+            }, {
+               "date_added": "13339180679898064",
+               "date_last_used": "0",
+               "guid": "40c7b4e9-4897-4e8b-8597-3a2b28421fa3",
+               "id": "17",
+               "name": "Support.Dell.Com",
+               "show_icon": false,
+               "source": "import_fre",
+               "type": "url",
+               "url": "http://www.dell.com/support/home",
+               "visit_count": 0
+            } ],
+            "date_added": "13375902883913930",
+            "date_last_used": "0",
+            "date_modified": "13375902996998590",
+            "guid": "d5bfda7f-0025-4321-bad6-fe5a36addea0",
+            "id": "15",
+            "name": "Dell",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "date_added": "0",
+            "date_last_used": "13340835277188164",
+            "guid": "1e15fe08-36d1-492f-9f13-9bcda29e19e9",
+            "id": "18",
+            "name": "Google",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "http://google.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "0",
+            "date_last_used": "0",
+            "guid": "db0dd9b2-1196-4678-9a78-ad2fb7d12d9d",
+            "id": "19",
+            "name": "Downloads",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "chrome://downloads/",
+            "visit_count": 0
+         }, {
+            "date_added": "0",
+            "date_last_used": "13339785664340067",
+            "guid": "15cc68e1-90bf-4102-bc01-082cecd6c2b2",
+            "id": "20",
+            "name": "  ",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "http://youtube.com.br/",
+            "visit_count": 0
+         }, {
+            "date_added": "0",
+            "date_last_used": "13357610256073059",
+            "guid": "a3bc3f7c-e3ca-41b3-a1ca-462341d8ae16",
+            "id": "21",
+            "name": "Facebook",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.facebook.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "13375902881065802",
+            "date_last_used": "0",
+            "guid": "c10bae95-b2d1-43a9-8287-93421086f220",
+            "id": "6",
+            "name": "McAfee Security",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://www.mcafee.com/consumer/v/browserfav/dell.html",
+            "visit_count": 0
+         } ],
+         "date_added": "13375902880814861",
+         "date_last_used": "0",
+         "date_modified": "13375902996997650",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Barra de favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "children": [  ],
+            "date_added": "13339181080617195",
+            "date_last_used": "0",
+            "date_modified": "13339181080617195",
+            "guid": "4225f90b-7f81-48fe-b890-6efe9450b027",
+            "id": "10",
+            "name": "Other Bookmarks",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13339279637850869",
+               "date_last_used": "0",
+               "guid": "cb759c99-c1ad-4fac-88f0-df4dec174018",
+               "id": "12",
+               "name": "Início – Netflix",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.netflix.com/browse",
+               "visit_count": 0
+            }, {
+               "date_added": "13349400964087827",
+               "date_last_used": "0",
+               "guid": "b8a1fd2d-1159-47b6-ac8d-0d0ad030363a",
+               "id": "13",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "edge://newtab/",
+               "visit_count": 0
+            }, {
+               "date_added": "13350447724473210",
+               "date_last_used": "0",
+               "guid": "55242267-eac0-45b1-9c99-cb6700d5807b",
+               "id": "14",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Twitch",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.twitch.tv/",
+               "visit_count": 0
+            } ],
+            "date_added": "13339181080617283",
+            "date_last_used": "0",
+            "date_modified": "13350447724473210",
+            "guid": "e97bc925-fca1-464b-8e13-faf84a96af8e",
+            "id": "11",
+            "name": "Synced Bookmarks",
+            "source": "unknown",
+            "type": "folder"
+         } ],
+         "date_added": "13375902880814863",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Outros favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13375902880814864",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Favoritos do celular",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CjEKDgiIgQISCEZAQSGTAQAAEgAqGHc2bXF6Vm4wSnYxTGYyeThMMHZQdUE9PUgDoAYMEq0BCBUSqAEKHGxmdnlsTlJmMlRGc1VvY25rK05hWWR0SVBuRT0SJGEzYmMzZjdjLWUzY2EtNDFiMy1hMWNhLTQ2MjM0MWQ4YWUxNhgAIAIoAjDBgIWKsjI40vXBpakxQI3k74myMkocM1liQWJnZGZWRGg4WTdLYVdScFJGVEF1RGRnPVofIh30S0hwN1FRdDhHYnV1V3hFV1UwSHVYUlhxTVRvPWVECP19wj4CYAUSrQEIERKoAQocTm5mclV4Z2REZi9YbnNoSFNYUDgrTHU2RVRJPRIkNDBjN2I0ZTktNDg5Ny00ZThiLTg1OTctM2EyYjI4NDIxZmEzGAAgACgAMM7wwaWpMTj988GlqTFA/fPBpakxShxPVldJTXpRK1U5eEVQeG12ZFJMc0VuU2dEZ0k9Wh8iHbtORVpiSSszYkF6Wk8wSjVvb1M1NkFSdzVBMmc9ZQAAAADCPgJgAhKOAQgBEokBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9EiQ0NzdhOGU0MS01ZDJkLTVmNWUtYWEwZS01MjcwNzFlYTc1MWQYACAAKAAwv8/BpakxONnRwaWpMUDZ0cGlqTFKHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAwj4CYAASrQEIExKoAQocZHg5U29Ea2wzSENXYVVSd3l1aGhBOEh0MnBjPRIkZGIwZGQ5YjItMTE5Ni00Njc4LTlhNzgtYWQyZmI3ZDEyZDlkGAAgACgAMM/wwaWpMTio9MGlqTFAqPTBpakxShxEcnd3SUNyQTdrdU8wVWRGS2lDMGlKRUVHVnc9Wh8iHdNPblFTY3RPZnZHbmYzcW9LS1cvcUhuUm8zbU09ZQAAAADCPgJgBRKsAQgOEqcBChxPUHJhd3lsNkdHdThZR3JOMFg1VjM1aWRVWjg9EiQ1NTI0MjI2Ny1lYWMwLTQ1YjEtOWM5OS1jYjY3MDBkNTgwN2IYACAAKAAwiICCotMxOIuDgqLTMUCLg4Ki0zFKHGNBR0hNUjNFYkVuQUp3TGg3OTliUzdyVUlKbz1aHiIcVlpObHh1ejZ6aTBlRmRka0tzTHFjMkhnQU1BPWXjgMpqwj4CYAUSrQEIEhKoAQocSEtQWkFBc2FoY3RFYUhWQjg0NU9BZ2hlUzZJPRIkMWUxNWZlMDgtMzZkMS00OTJmLTlmMTMtOWJjZGEyOWUxOWU5GAAgAigCML+AhYqyMjj99MGlqTFAjeTvibIyShw5SWw1QWk5Nm1xeTJCcXlFTEJ2V1o1VW5vVGs9Wh8iHadOVmNXTnNjdEwxNjVtK3FLVmo3bVNjdjFjRk09ZRAw/+TCPgJgBRKtAQgLEqgBChxBb2UrRFFna2tneXpGUC90MkxCYmExZjlwOUk9EiRlOTdiYzkyNS1mY2ExLTQ2NGItOGUxMy1mYWY4NGE5NmFmOGUYACAAKAAw0vDBpakxOJ31waWpMUCd9cGlqTFKHDBTYmpWUTRrZnQzcUE1MTRUeU9qT3VoVnZyQT1aHyIdt2F3NWlHaHRiVjg2Ymx3cTI2bGJvMEJmZmRsZz1lAAAAAMI+AmAAEqwBCBASpwEKHFRRb3NGQW44bnhMNEZYRlZrTUw5TmVTeGJCQT0SJDdlNjg1NjhkLWU0YWMtNDlmNC1hNTVmLWY2NTk0N2UwMDhlYxgAIAAoADDN8MGlqTE42fPBpakxQNnzwaWpMUocTG9Nd2JPQmxDdEtCVm9rSzdKaVFyNXp1MmpZPVoeIhx3V09SUndGb1N1LzhqSTE0UmxRRlZTc0FoVlE9ZQAAAADCPgJgAhKOAQgDEokBChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EiRhMWMwNWNjOS1mM2Y1LTVhN2YtODhkNy1mYTQ0ZWY1OGYxMjEYACAAKAAwxc/BpakxOLfSwaWpMUC30sGlqTFKHHl6TkIwMWNuNTRBN2NSVTB1VCsvUGdtVHRVbz1aAGUAAAAAwj4CYAASrAEIDxKnAQocVUhDOHZkZFI2TlRITk1maGRpOG1WTlBiOVI0PRIkZDViZmRhN2YtMDAyNS00MzIxLWJhZDYtZmU1YTM2YWRkZWEwGAAgACgAMMzwwaWpMTi488GlqTFAuPPBpakxShxRMkxMT0pVMEpZRzhmNFhEMTZvSFVZbFVGQjQ9Wh4iHE8yZnNkT0U5Zzl6Z00xaDBTMlhpR1hqbUIwQT1lAAAAAMI+AmAAEq0BCBQSqAEKHHprUzJhbkhKMlN1VHN5eXBYOU0xOURocVBWWT0SJDE1Y2M2OGUxLTkwYmYtNDEwMi1iYzAxLTA4MmNlY2Q2YzJiMhgAIAIoAjDAgIWKsjI4xvTBpakxQI3k74myMkocM1R2R2RaNllZTmpHdFErTWRsNDV3N3lxTm5jPVofIh3pM1lQUG1HWjBabk1valU2ZFlCK0tML3hoRks4PWU4+Tkzwj4CYAUSrAEIDRKnAQocOCsvaEJMYlpKL2xCSFJZOTNsSG5KQkdYTUdNPRIkYjhhMWZkMmQtMTE1OS00N2I2LWFjOGQtMGQwYWQwMzAzNjNhGAAgACgAMOvPorDPMTjj0KKwzzFA49CisM8xShxhRWN6YnQ0emZKRkNlUEtkWkFGMGNHU1piLzA9Wh4iHENyL1UyQVpNeDlvZ01TVTc3c29nenMzNzdIWT1l2K+wAsI+AmAFEqwBCAoSpwEKHGZDbG1hM0xMRkdKWU9FRlFRRDNIY1BwRXkwbz0SJDQyMjVmOTBiLTdmODEtNDhmZS1iODkwLTZlZmU5NDUwYjAyNxgAIAAoADDT8MGlqTE4uPXBpakxQLj1waWpMUocVzVFK1NTNzlOVTVEMmtMZzdKalVYYmg4Rk1RPVoeIhxvWHJOU1BLbitUMVJJTmhSeVpGUkpHNllWaGc9ZQAAAADCPgJgABKsAQgMEqcBChwzOGdiSUxuOFhDOHNzaE9TS3hhZ0oxckE1cUk9EiRjYjc1OWM5OS1jMWFkLTRmYWMtODhmMC1kZjRkZWMxNzQwMTgYACAAKAAwrMXF0qkxOPnHxdKpMUD5x8XSqTFKHENyalJwY2FzTzhEdGdZK0Yrd1Eva3Uydml1Yz1aHiIcNE9LckV2dUVselVBemdyMWx5TC94MVRDRkljPWVZRck/wj4CYAUSjgEIAhKJAQocWWNTVG9udkVTUHdxQ3M0TDJjclZodjY4TDk4PRIkYjQ3MDZmMmEtZjdhOS01MGVjLWJjNDktZTY0YTliNmNkYWUxGAAgACgAMMDPwaWpMTj70cGlqTFA+9HBpakxShxvUFZraHdCUmJWNjVLQ1dSMitJT05IV29PdTg9WgBlAAAAAMI+AmAAMAA4AA==",
+   "version": 1
+}
