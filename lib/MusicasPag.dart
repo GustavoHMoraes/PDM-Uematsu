@@ -1,61 +1,67 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter_app/main.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CMusica {
-  String audio;
+  String musica;
   String titulo;
+  String imagem;
 
-  CMusica(this.audio, this.titulo);
+  CMusica(this.musica, this.titulo, this.imagem);
 }
 
-class MusicasPag extends StatefulWidget {
+class MusicasPag extends StatelessWidget {
   MusicasPag({Key? key}) : super(key: key);
 
-  @override
-  _MusicasPagState createState() => _MusicasPagState();
-}
-
-class _MusicasPagState extends State<MusicasPag> {
-  final AudioPlayer _audioPlayer = AudioPlayer();
-  bool _isPlaying = false;
-
   final CImg imgNU = CImg('assets/img/NobuoD.png', '', 1); 
-  final CMusica audioOWA = CMusica('assets/audio/OneWingedAngel.mp3', 'One Winged Angel');
+  final List<CMusica> musicas = [
+    CMusica(
+      'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      '"One Winged Angel"',
+      'assets/img/NobuoOWA.png',
+    ),
+    CMusica(
+      'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      '"Prelude"',
+      'assets/img/NobuoPR.png',
+    ),
+    CMusica(
+      'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      '"Terra’s Theme"',
+      'assets/img/NobuoTT.png',
+    ),
+  ];
 
-
-  void _togglePlayPause() {
-    if (_isPlaying) {
-      _audioPlayer.pause();
+  void _abrirMusica(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
     } else {
-      _audioPlayer.play((audioOWA.audio)); 
+      throw "Não foi possível abrir o link: $url";
     }
-    setState(() {
-      _isPlaying = !_isPlaying;
-    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60),
+        preferredSize: const Size.fromHeight(60),
         child: Container(
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 183, 212, 220),
+            color: const Color.fromARGB(255, 183, 212, 220),
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.3),
                 spreadRadius: 0,
                 blurRadius: 10,
-                offset: Offset(0, 4),
+                offset: const Offset(0, 4),
               ),
             ],
           ),
           child: AppBar(
             title: const Text("Músicas"),
             centerTitle: true,
-            backgroundColor: Color(0x00000000),
+            backgroundColor: const Color(0x00000000),
             elevation: 0,
           ),
         ),
@@ -63,47 +69,82 @@ class _MusicasPagState extends State<MusicasPag> {
       backgroundColor: const Color.fromARGB(255, 241, 243, 242),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: 200,  
-              height: 200,
+              width: 250,
+              height: 250,
+              margin: const EdgeInsets.only(top: 16, bottom: 30),
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(imgNU.img), 
+                  image: AssetImage(imgNU.img),
                   fit: BoxFit.cover,
                 ),
+                borderRadius: BorderRadius.circular(8),
               ),
             ),
-            const SizedBox(height: 30), 
-            Text(
-              audioOWA.titulo,
-              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 20), 
-            ElevatedButton(
-              onPressed: _togglePlayPause,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 160, 212, 220),
-                padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-              child: Text(
-                _isPlaying ? 'Pausar' : 'Tocar',
-                style: const TextStyle(fontSize: 18, color: Colors.black),
+
+            Expanded(
+              child: ListView.builder(
+                itemCount: musicas.length,
+                itemBuilder: (context, index) {
+                  final musica = musicas[index];
+                  return Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Row(
+                      children: [
+                        
+                        Container(
+                          width: 80,
+                          height: 80,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(musica.imagem),
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                        const SizedBox(width: 16), 
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                musica.titulo,
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const SizedBox(height: 10),
+
+                              ElevatedButton(
+                                onPressed: () => _abrirMusica(musica.musica),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(255, 160, 212, 220),
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 10, horizontal: 20),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                ),
+                                child: const Text(
+                                  'Ouvir',
+                                  style: TextStyle(fontSize: 16, color: Colors.black),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
               ),
             ),
           ],
         ),
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    _audioPlayer.dispose();
-    super.dispose();
   }
 }
