@@ -38,9 +38,9 @@ class TrabalhosPag extends StatelessWidget {
   );
 
   final CImg imgT1 = CImg('assets/img/Nobuo4.png', '', 1);
-  final CImg imgT2 = CImg('assets/img/Nobuo4.png', '', 1);
-  final CImg imgT3 = CImg('assets/img/Nobuo4.png', '', 1);
-  final CImg imgT4 = CImg('assets/img/Nobuo4.png', '', 1);
+  final CImg imgT2 = CImg('assets/img/Nobuo5.jpg', '', 1);
+  final CImg imgT3 = CImg('assets/img/Nobuo6.jpg', '', 1);
+  final CImg imgT4 = CImg('assets/img/Nobuo7.png', '', 1);
 
   final CTrabalho t1 = CTrabalho(
     '  Square (1986)',

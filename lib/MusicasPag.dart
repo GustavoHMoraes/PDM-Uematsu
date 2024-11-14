@@ -16,17 +16,17 @@ class MusicasPag extends StatelessWidget {
   final CImg imgNU = CImg('assets/img/NobuoD.png', '', 1); 
   final List<CMusica> musicas = [
     CMusica(
-      'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      'https://www.youtube.com/watch?v=nNms5rOaGlk',
       '"One Winged Angel"',
       'assets/img/NobuoOWA.png',
     ),
     CMusica(
-      'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      'https://www.youtube.com/watch?v=XX9AroX7x1o',
       '"Prelude"',
       'assets/img/NobuoPR.png',
     ),
     CMusica(
-      'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      'https://www.youtube.com/watch?v=HgXwuDyCTfk',
       '"Terra’s Theme"',
       'assets/img/NobuoTT.png',
     ),

@@ -14,7 +14,7 @@ class ArtistaPag extends StatelessWidget {
 
   final List<CLink> links = [
     CLink("Compre o Merch!", "https://www.merchbar.com/reggae-latin-world/nobuo-uematsu?srsltid=AfmBOoq7uADVVcvl66w64Ef1zP8v4AuXL-VDqHurhApgj3omHpUkIgPj"),
-    CLink("Ouça as músicas!", "https://www.youtube.com/channel/UCZOd9KDD58MZR13UbbtdrpQ"),
+    CLink("Veja a Dog Ear Records!", "https://www.youtube.com/@dogearrecords"),
     CLink("X do Uematsu!", "https://x.com/uematsunobuo"),
   ];
 
